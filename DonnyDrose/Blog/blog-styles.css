@@ -1,0 +1,75 @@
+
+/* Body Styles */
+body {
+    background: linear-gradient(black 12rem, #ded);
+}
+
+/* Main content section */
+.main-content {
+    width: 100%;
+}
+
+.main-content h1 {
+    color: white;
+    text-align: center;
+}
+
+.header {
+    background: radial-gradient(#ded 15%, black 40%);
+}
+
+#scrollText h1 {
+    color: white;
+}
+
+/* Hero container styles */
+.blog-container {
+    max-width: 45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+.blog-post {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    background-color: #d2f1d2;
+    border: 0.1rem solid #111;
+}
+
+.blog-date {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.blog-post h2 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.blog-post p {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    color: #222;
+}
+
+.blog-post-heading {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.blog-post p:hover {
+    color: springgreen;
+}

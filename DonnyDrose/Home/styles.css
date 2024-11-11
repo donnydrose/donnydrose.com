@@ -1,0 +1,72 @@
+
+.main-content {
+    width: 100%;
+}
+
+.main-content h1 {
+    color: white;
+    text-align: center;
+}
+
+/* Hero Section */
+
+/* Hero Intro Container */
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+}
+
+/* Hero Text Styles */
+.intro-container h1 {
+    font-family: serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: whitesmoke;
+}
+
+.intro-container p {
+    font-family: sans-serif;
+    text-align: center; 
+    font-size: 1.5rem;
+    letter-spacing: 0.08rem;
+    line-height: 1.85rem;
+    width: 75%;
+    color: #eee;
+}
+
+.intro-container p a {
+    color: tan;
+}
+
+/* Hero Icon Container */
+
+.hero-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    
+}
+
+/* Hero Icons */
+
+.hero-icon-container img {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.55rem;
+    border: 2px solid white;
+    box-shadow: -3px 3px 10px black;
+}
+
+/* Shadow effect on Icon hover */
+.hero-icon-container img:hover {
+    box-shadow: -.2rem .2rem 5rem lightblue;
+    opacity: .7;
+}
+
+

@@ -1,0 +1,61 @@
+/* Space between Hero and Footer for contrast*/
+.spacer {
+    height: 10rem;
+}
+
+/*Skyline section */
+.skyline {
+    display: flex;
+    width: 100%; /* Responsive width */
+    max-width: 22.22rem; /* Max width for larger screens */
+    height: 8.33rem; /* Set the height of the skyline */
+    margin: auto;
+    background-color: transparent;
+    overflow: hidden; /* Prevent overflow */
+    transform: rotate(180deg);
+    margin-top: 4rem;
+}
+
+/* Building Styles*/
+.building-color {
+    background-color: #000; /* Building color */
+    margin: 0 .111rem; /* Spacing between buildings */
+    position: relative;
+    bottom: 0; /* Align buildings to the bottom */
+}
+
+.building-1 { width: 35px; height: 85px; }
+
+.building-2 { width: 52px; height: 110px; }
+
+.building-3 { width: 80px; height: 90px; }
+
+.building-4 { width: 50px; height: 145px; }
+
+.building-5 { width: 45px; height: 80px; }
+
+.building-6 { width: 45px; height: 110px; }
+
+.building-7 {width: 35px; height: 95px; }
+
+.building-8 { width: 40px; height: 150px; }
+
+.building-9 { width: 65px;height: 80px; }
+
+.building-10 { width: 35px; height: 50px; }
+
+/* Footer Section*/
+footer {
+    background-color: black;
+    color: White;
+    text-align: center;
+    width: 100%;
+    padding: 2rem;
+}
+
+footer h3 {
+    font-family: cursive;
+}
+footer h4 {
+    font-family: cursive;
+}

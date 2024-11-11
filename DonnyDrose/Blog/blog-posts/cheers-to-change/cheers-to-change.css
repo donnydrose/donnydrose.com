@@ -1,0 +1,381 @@
+/* Resetting styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    /*background: linear-gradient( #eee 10%, springgreen,  springgreen, 93%,green 98%); /*creating Skyline Gradient art for the Body*/
+    background-color: #d2f1d2;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    background: linear-gradient(to top, green, springgreen, white);
+    color: whitesmoke;
+    min-height: 6rem;
+}
+
+.logo-container { /*inside header*/
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 40%;
+padding: .25rem;
+margin-left: 2.5rem;
+margin-bottom: 1rem;
+margin-top: 2.5rem;
+}
+
+
+.logo-name { /* Changes color of the first word of the logo*/
+font-family: serif;
+font-weight: 400;
+font-style: normal;
+font-size: 3rem; 
+line-height: .75;
+letter-spacing: 1px;
+animation: colorChange 12s infinite; 
+
+}
+
+                            /*Animation Code for color change logo*/
+@keyframes colorChange {
+10% {color: white;}
+50%{color: black;}
+75%{color: lightgrey;}
+95% {color: white;}
+}
+
+.navbar {
+width: 60%;
+margin-right: 6rem;
+margin-top: 3rem;
+}
+
+
+.navbar ul {
+display: flex; 
+justify-content: flex-end;
+align-items: center;
+flex-wrap: nowrap;
+gap: 2rem;
+list-style-type: none;
+
+}
+
+.navbar li a{
+font-family: sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 1rem;
+letter-spacing: .2rem;
+line-height: 2;
+color: #fff;
+text-shadow: -2px 2px 1px grey;
+
+}
+
+nav a:hover {
+box-shadow: -.2rem .2rem 5rem white;
+}
+
+a {
+text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 55px;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    /*background-color: rgb(7, 190, 7);*/
+    color: white;
+    text-shadow: -3px 3px 5px springgreen;
+    transform: rotate(-4deg);
+    padding: .35rem;
+}
+
+
+p {
+    
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+
+}
+
+h2 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.blog-post a {
+    color: #111;
+    text-decoration: underline;
+}
+
+/* Blog styles */
+.blog-container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.blog-container p {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    color: black;
+}
+
+
+.blog-post {
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    background-color: rgb(210, 241, 210);
+    border: 3px double white;
+}
+
+.blog-post:hover {
+    background-color: rgb(210, 241, 210);
+    border: 3px double white;
+}
+
+.blog-post h2 {
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    color: #111;
+}
+
+.blog-post span {
+    font-size: 1rem;;
+}
+
+.post-link {
+    float: right;
+}
+
+
+
+.intro-line {
+    font-size: 1rem;
+    color: #666; /* Slightly darker for contrast */
+    margin-top: 0.5rem;
+}
+
+.blog-post-audio-frame {
+    border: 1rem solid white;
+    width: 50%;
+    margin: 3rem auto;
+}
+
+footer {
+    background-color: #111;
+    color: tan;
+    text-align: center;
+    height: 75px;
+    padding: 2rem;
+}
+
+/* Blog post 3 */
+/*Animation to replace letter*/
+
+/* Example media query for mobile devices */
+@media (max-width: 1268px) {
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .logo-container { /*inside header*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: .25rem;
+    margin: 2rem 0 0 0;
+    }
+    
+    
+    .logo-name { /* Changes color of the first word of the logo*/
+    font-family: serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem; 
+    line-height: .75;
+    letter-spacing: 1px;
+    animation: colorChange 12s infinite; 
+    
+    }
+    
+                                /*Animation Code for color change logo*/
+    @keyframes colorChange {
+    10% {color: white;}
+    50%{color: black;}
+    75%{color: lightgrey;}
+    95% {color: white;}
+    }
+    
+    .navbar {
+    width: 100%;
+    margin: 2rem 0 0 0;
+    }
+    
+    
+    .navbar ul {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    
+    }
+    
+    .navbar li a{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    line-height: 2;
+    color: #fff;
+    text-shadow: -2px 2px 1px grey;
+    
+    }
+    
+    nav a:hover {
+    box-shadow: -.2rem .2rem 5rem white;
+    }
+    
+    a {
+    text-decoration: none;
+    }
+    
+    h1 {
+        font-size: 3rem;
+        width: fit-content;
+        margin: auto;
+        font-family: 'Permanent Marker', cursive;
+        font-size: 55px;
+        font-weight: 500;
+        text-align: center;
+        /*background-color: rgb(7, 190, 7);*/
+        color: black;
+        transform: rotate(-4deg);
+        padding: .35rem;
+    }
+    
+    
+    
+    
+    .blog-post a {
+        color: #111;
+        text-decoration: underline;
+    }
+    
+    /* Blog styles */
+    .blog-container {
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+        margin: 2rem auto;
+        padding: 1rem;
+    }
+    
+    .blog-container p {
+        width: 100%;
+        text-align: center;
+        padding: 2rem;
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        color: black;
+    }
+    
+    
+    .blog-post {
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        background-color: rgb(210, 241, 210);
+        border: 3px double white;
+    }
+    
+
+    .blog-post p {
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 150%;
+    
+    }
+    
+ 
+    .blog-post h2 {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 1.5rem;
+        color: #111;
+    }
+
+    time {
+        position: relative;
+        top: 1rem;
+        font-size: .5rem;
+    }
+    
+    .post-link {
+        position: relative;
+        top: 1rem;
+        float: right;
+    }
+    
+    .blog-post-audio-frame {
+        border: 1rem solid white;
+        width: 50%;
+        margin: 3rem auto;
+    }
+    
+    footer {
+        background-color: #111;
+        color: tan;
+        text-align: center;
+        height: 75px;
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,239 @@
+/* Body Styles */
+body {
+    background: linear-gradient(black 12rem, coral);
+}
+
+/* Header Styles */
+.header {
+    background: radial-gradient(coral 15%, black 40%);
+}
+
+#page-name-design {
+    animation: colorChange 12s infinite; 
+    color: transparent;
+    font-size: 2.5rem;
+}
+
+#scrollText h1 {
+    color: white;
+}
+
+.showcase-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem;
+    margin-bottom: 6rem;
+}
+
+.showcase-container h2 {
+    color: white;
+}
+
+.space-holder {
+    height: 36rem;
+}
+
+
+
+/* Media Queries */
+/* Media Queries */
+
+/* Media Queries for Laptop */
+@media (max-width: 1024px) {
+    html {
+        font-size: 17px;
+    }
+
+    /* Body Styles */
+body {
+    width: auto;
+    background-repeat: repeat;
+    margin: auto;
+}
+
+    .hero-intro-container {
+        width: 95%;
+    }
+
+    .hero-intro-container h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-intro-container h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Media Queries for tablet */
+@media (max-width: 796px) {
+
+    /* Html Styles  */
+    html {
+        font-size: 16px;/* adjust rem for tablet */
+    }
+
+     /* Header Styles */
+     .header {
+        height: 8rem; /* Reduce header */
+    }
+
+    /* Logo Name */
+    .logo-name { 
+        font-size: 2.5rem; 
+    }
+
+    #portfolio-logo-black {
+        font-size: 2rem;
+        margin-top: .5rem;
+    }
+
+    /*Navbar Styles*/
+
+    .navbar {
+        padding: 0.75rem;
+        margin-top: .5rem;
+    }
+
+    .navbar ul {
+        gap: 2rem; /* Spacing for 
+        margin: auto; */
+        }
+
+    /* Navbar Links */
+    .navbar li a{
+        font-size: 1.175rem;
+        
+    }
+
+    /*  Hero Intro Container  */
+    
+    .hero-intro-container {
+        width: 100%;/*   ---- Adjusted width for tablet ----  */
+    }
+
+    .hero-intro-container h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Hero Icons */
+    .hero-icon-container img {
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid white;
+    box-shadow: -2px 2px 8px black;
+}
+}
+
+/* Media Queries for mobile */
+@media (max-width: 425px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    header {
+        background: radial-gradient(white 15%, black 40%);
+    }
+
+    /* Logo Name */
+    .logo-name { 
+        font-size: 2.5rem; /* Lower font size */
+    }
+    /*Navbar Styles*/
+
+    .navbar {
+        margin-top: .8rem;/* Lower margin amount */
+    }
+
+
+    /* Navbar Links */
+    .navbar li a{
+        font-size: 1.175rem; /* Lower font size */
+    }
+
+
+    /*Shadow Effects for Navbar Links */
+
+    .border-bottom-coral  {
+        border-bottom: 1px solid coral;
+    }
+
+    .border-bottom-springgreen {
+        border-bottom: 1px solid springgreen;
+    }
+
+    .border-bottom-skyblue {
+        border-bottom: 1px solid skyblue;
+    }
+
+    .border-bottom-tan  {
+        border-bottom: 1px solid tan;
+    }
+
+
+
+
+    /* Hero Intro Container */
+    .hero-intro-container {
+        width: 20rem; /* Create width for text on mobile */
+    }
+
+    /* Hero Text Styles */
+    .hero-intro-container h1 {
+        font-size: 1.5rem;
+    }
+    .hero-intro-container h2 {
+        font-size: 1rem; /* Reduce size for mobile */
+        text-align: justify;
+    }
+
+    /* Hero Icon Container */
+    .hero-icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 5rem;
+    }
+
+    /* Hero Icons */
+    .hero-icon-container img {
+        display: block;
+        width: 2.5rem; /* Reduce size of Icons */
+        height: 2.5rem; /* Reduce size of Icons */
+        padding: 0.55rem;
+        border: 2px solid white;
+        box-shadow: -3px 3px 10px black;
+    }
+
+        /*Skyline section */
+    .skyline {
+        display: flex;
+        width: 100%; /* Responsive width */
+        max-width: 22.22rem; /* Max width for larger screens */
+        height: 8.33rem; /* Set the height of the skyline */
+        margin: auto;
+        background-color: transparent;
+        overflow: hidden; /* Prevent overflow */
+        transform: rotate(180deg);
+    }
+
+    /* Building Styles*/
+    .building-color {
+        background-color: #000; /* Building color */
+        margin: 0 .111rem; /* Spacing between buildings */
+        position: relative;
+        bottom: 1px; /* Align buildings to the bottom */
+    }
+
+    /* Footer Section*/
+    footer {
+        background-color: black;
+        color: tan;
+        text-align: center;
+        width: 100%;
+        padding: .5rem;
+    }
+}

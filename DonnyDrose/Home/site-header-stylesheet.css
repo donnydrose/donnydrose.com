@@ -1,0 +1,179 @@
+
+/* Base Font Size */
+html {
+    font-size: 18px;/* Setting the document rem size*/
+    background-color: black;
+}
+
+/* Body Styles */
+body {
+    background: linear-gradient(black 12rem, white);
+    width: 80rem; /* Responsive Unit */
+    background-repeat: no-repeat;
+    margin: auto; /* Centered body */
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(white 15%, black 40%);
+    background-repeat: no-repeat;
+    height: 12rem;
+    margin-bottom: 6rem;
+    margin-top: 3rem;
+}
+
+/* Logo Container*/
+.logo-container { 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+/* Logo Name */
+.logo-name { 
+    font-family: serif;
+    font-size: 3.25rem; 
+    line-height: 0.75;
+    letter-spacing: 0.055rem;
+    padding: .25rem;
+    margin-bottom: .5rem;
+}
+
+.logo-name a {
+    color: white;
+}
+
+/* Logo styles */
+
+#page-name {
+    animation: colorChange 12s infinite; 
+    color: transparent;
+    font-size: 2.5rem;
+}
+
+/* Animation for logo color change */
+
+@keyframes colorChange {
+    30% {color: black;}
+}
+
+/*Navbar Styles*/
+
+.navbar {
+    padding: 0.75rem;
+    margin-top: 2rem;
+}
+
+
+.navbar ul {
+    display: flex; 
+    list-style-type: none;
+    gap: 10rem;
+    margin: 0;
+}
+
+/* Navbar Links */
+.navbar li a {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #fff;
+    padding-bottom: 0.25rem;
+    text-shadow: 0px 0px 1px white;
+    
+}
+
+a {
+text-decoration: none;
+}
+
+@keyframes linkColorChange {
+    0%{color: whitesmoke;}
+    100%{color: var(--link-color, blue);}
+    }
+
+/* Design link  */
+.link-animation-design a {
+    animation: linkColorChange 10s 3;
+    --link-color: coral;
+}
+
+/* Blog link */
+.link-animation-blog a {
+    animation: linkColorChange 10s 3;
+    --link-color: springgreen;
+}
+
+/* Music link */
+.link-animation-music a {
+    animation: linkColorChange 10s 3;
+    --link-color: skyblue;
+}
+
+/* Contact link */
+.link-animation-contact a {
+    animation: linkColorChange 10s 3;
+    --link-color: tan;
+}
+
+
+/* Hover effects for navigation links */
+.hover-coral a:hover {
+    border-bottom: 3px solid coral;
+}
+
+.hover-springgreen a:hover {
+    border-bottom: 3px solid springgreen;
+}
+
+.hover-skyblue a:hover {
+    border-bottom: 3px solid skyblue;
+}
+
+.hover-white a:hover {
+    border-bottom: 3px solid white;
+}
+
+.hover-tan a:hover {
+    border-bottom: 3px solid tan;
+}
+
+/* Hero Icon background colors */
+
+#coral {
+    background-color: coral;
+}
+
+#springgreen {
+    background-color: springgreen;
+}
+
+#skyblue {
+    background-color: skyblue;
+}
+
+#tan {
+    background-color: tan;
+}
+
+.hero-container {
+    height: 100%;
+}
+.song-container {
+    height: 100%;
+}
+.showcase-container {
+    height: 100%;
+}
+.blog-container {
+    height: 100%;
+}
+.connect-container {
+    height: 100%;
+}

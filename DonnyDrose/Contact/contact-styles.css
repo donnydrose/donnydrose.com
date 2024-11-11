@@ -1,0 +1,84 @@
+
+/* Body Styles */
+body {
+    background: linear-gradient(black 12rem, tan);
+}
+
+.header {
+    background: radial-gradient( tan 15%, black 40%);
+}
+
+#page-name-connect {
+    animation: colorChange 12s infinite; 
+    color: transparent;
+    font-size: 2.5rem;
+}
+
+#scrollText h1 {
+    color: white;
+}
+
+/* Hero Section */
+.connect-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 6rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* Hero Image container*/
+.hero-image-container {
+    width: 80%;
+    overflow: hidden;
+    border-radius: 25px;
+    border: 10px solid black;
+}
+
+/* Image Styles */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    
+}
+
+.contact-form {
+    text-align: center;
+}
+
+.contact-form iframe{
+    width: 30rem;
+    height: 53rem;
+    background-color: transparent;
+    text-align: center;
+    border: 0 solid transparent;
+}
+
+
+
+/* Hero Icon Container */
+.hero-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Hero Icons */
+.hero-icon-container img {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    padding: .55rem;
+    border: 2px solid white;
+    box-shadow: -3px 3px 10px black;
+}
+
+
+/* Shadow effect on Icon hover */
+.hero-icon-container img:hover {
+    box-shadow: -.2rem .2rem 5rem lightblue;
+}
