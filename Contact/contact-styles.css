@@ -1,7 +1,7 @@
 
 /* Body Styles */
 body {
-    background: linear-gradient(black 12rem, tan);
+    background: linear-gradient(black 12rem, tan 14rem, beige);
 }
 
 .header {
@@ -15,7 +15,7 @@ body {
 }
 
 #scrollText h1 {
-    color: white;
+    color: black;
 }
 
 /* Hero Section */
@@ -31,7 +31,7 @@ body {
 
 /* Hero Image container*/
 .hero-image-container {
-    width: 80%;
+    width: 50%;
     overflow: hidden;
     border-radius: 25px;
     border: 10px solid black;

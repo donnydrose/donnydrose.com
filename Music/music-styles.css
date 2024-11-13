@@ -1,11 +1,11 @@
 
 /* Body Styles */
 body {
-    background: linear-gradient(black 12rem, skyblue);
+    background: linear-gradient(black 12rem, coral);
 }
 
 .header {
-    background: radial-gradient(skyblue 15%, black 40%);
+    background: radial-gradient(coral 15%, black 40%);
 }
 
 .main-content {

@@ -1,38 +1,59 @@
 /* Body Styles */
 body {
-    background: linear-gradient(black 12rem, coral);
+    background: linear-gradient(black 10rem, lightgrey 14rem, white);
 }
 
 /* Header Styles */
 .header {
-    background: radial-gradient(coral 15%, black 40%);
+    background: radial-gradient(#bbddff 15%, black 40%);
 }
 
-#page-name-design {
-    animation: colorChange 12s infinite; 
-    color: transparent;
-    font-size: 2.5rem;
+.logo-container {
+    margin-top: .1rem;
+}
+
+.logo-name {
+    margin-bottom: .1rem;
+}
+
+.navbar {
+    margin-top: .1rem;
 }
 
 #scrollText h1 {
-    color: white;
+    color: black;
 }
 
-.showcase-container {
+.landing-pages-intro {
+    text-align: center;
+    margin: 6rem;
+}
+
+.landing-pages-intro h2, .landing-page h3 {
+    color: black;
+
+}
+
+.landing-pages-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 3rem;
-    margin-bottom: 6rem;
+    flex-wrap: wrap;
+    gap: 6rem;
+    margin: 1rem 0 6rem 0;
 }
 
-.showcase-container h2 {
-    color: white;
+.landing-page {
+    text-align: center;
 }
 
-.space-holder {
-    height: 36rem;
+.page-link-container {
+    border: 3px solid black;
+    width: 15rem;
+    height: 20rem;
+    background: radial-gradient(#bbddff 15%, black 90%);
+    margin-top: 1.5rem;
 }
 
 
