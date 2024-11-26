@@ -1,260 +1,539 @@
-/* Body Styles */
+
+    /* Base Font Size */
+html {
+    font-size: 18px;/* Setting the document rem size*/
+    
+}
+
 body {
-    background: linear-gradient(black 10rem, lightgrey 14rem, white);
+    background: linear-gradient( #c9d9f1 14rem, white 85%, #39f 95%); /*set textured background*/
+    overflow-x: hidden; /* Prevent scrollbar due to airplane animation*/
 }
 
 /* Header Styles */
 .header {
-    background: radial-gradient(#bbddff 15%, black 40%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    height: 27rem;
 }
 
-.logo-container {
-    margin-top: .1rem;
+/*Name Styles */
+.name { 
+    font-family: serif;
+    font-size: 8.25rem; 
+    line-height: 0.75;
+    letter-spacing: 0.055rem;
 }
 
-.logo-name {
-    margin-bottom: .1rem;
+.name a {
+    color: white;
+}
+
+.page-name {
+    text-align: center;
+    color: #39f;
+    font-size: 3rem;
+    font-family: Helvetica, sans-serif;
+    margin-top: 3rem;
+}
+
+/*  Animation for scroll warning */
+.scrolling-banner-container {
+    position: absolute;
+    top: 3rem;
+    animation: moveLeft 10s linear infinite;
+    color: black;
+    font-size: 2.5rem;
+}
+
+/* Animation for scrolling banner */
+
+@keyframes moveLeft {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 100%;
+        transform: translateX(-80rem);
+    }
+}
+
+/* Airplane image from https://clipart-library.com/clip-art/airplane-clipart-transparent-18.htm */
+#banner img {
+    width: 5rem;
+    height: 4rem;
+    display: inline;
+    vertical-align: middle;
+}
+
+/*  Line up img and text */
+.scrolling-banner-container h2 {
+    display: inline;
+}
+
+/*  Create a banner look */
+.scrolling-banner-container span {
+    background-color: whitesmoke;
+    color: #333;
+    padding: .2rem 1rem;
 }
 
 .navbar {
-    margin-top: .1rem;
+    width: 100%;
 }
 
-#scrollText h1 {
-    color: black;
+/*Navbar Styles*/
+.navbar ul {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    gap: 3rem;
+}
+
+/* Navbar Links */
+.navbar li a {
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: -1px 1px 1px #444;
+}
+
+a {
+text-decoration: none;
+}
+
+@keyframes linkColorChange {
+    0%{color: whitesmoke;}
+    50%{color: var(--link-color, blue);}
+    55%{color: whitesmoke;}
+    }
+
+/* Home link  */
+.link-animation-home a {
+    animation: linkColorChange 5s infinite;
+    --link-color: #111;
+}
+
+/* Blog link */
+.link-animation-blog a {
+    animation: linkColorChange 5s infinite;
+    --link-color: #6c6;
+}
+
+/* Music link */
+.link-animation-music a {
+    animation: linkColorChange 5s infinite;
+    --link-color: #c93;
+}
+
+/* Contact link */
+.link-animation-contact a {
+    animation: linkColorChange 5s infinite;
+    --link-color: #a30;
+}
+
+
+/* Hover effects for navigation links */
+.hover-music a:hover {
+    border-bottom: 3px solid #c93;
+}
+
+.hover-blog a:hover {
+    border-bottom: 3px solid #6c6;
+}
+
+.hover-home a:hover {
+    border-bottom: 3px solid #111;
+}
+
+.hover-contact a:hover {
+    border-bottom: 3px solid #a30;
+}
+
+
+/*       Main Content Section     */
+.main-content {
+    margin-top: 6rem;
+    text-align: center;
 }
 
 .landing-pages-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24rem;
     text-align: center;
-    margin: 6rem;
+    margin: 6rem auto;
 }
 
-.landing-pages-intro h2, .landing-page h3 {
-    color: black;
+.landing-pages-intro h1 {
+    font-size: 3rem;
+}
+
+.landing-pages-intro h2 {
+    font-size: 2rem;
+}
+
+.landing-pages-intro p {
+    font-size: 1.25rem;
+    margin: auto;
+    line-height: 1.8rem;
 
 }
 
 .landing-pages-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6rem;
+    text-align: center;
     margin: 1rem 0 6rem 0;
 }
 
-.landing-page {
-    text-align: center;
+
+/*  Individual Page Section Styles   */
+.page-halloween24 {
+    background: linear-gradient(#111, #666);
+    color: white;
 }
 
-.page-link-container {
+.page-link-heading {
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: .3rem;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+.main-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.page-link-photo {
+    background-image: url(./resources/images/halloween24.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border: 3px solid black;
-    width: 15rem;
+    width: 17rem;
     height: 20rem;
-    background: radial-gradient(#bbddff 15%, black 90%);
     margin-top: 1.5rem;
 }
 
-
-
-/* Media Queries */
-/* Media Queries */
-
-/* Media Queries for Laptop */
-@media (max-width: 1024px) {
-    html {
-        font-size: 17px;
-    }
-
-    /* Body Styles */
-body {
-    width: auto;
-    background-repeat: repeat;
-    margin: auto;
+.page-link-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 1.5rem;
 }
 
-    .hero-intro-container {
-        width: 95%;
-    }
+.page-link-description {
+    font-size: 1.75rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: .3rem;
+    line-height: 1.75rem;
+    letter-spacing: .2rem;
 
-    .hero-intro-container h1 {
-        font-size: 1.75rem;
-    }
-    
-    .hero-intro-container h2 {
-        font-size: 1.2rem;
-    }
 }
 
-/* Media Queries for tablet */
-@media (max-width: 796px) {
+.link-buttons {
+    display: flex;
+    justify-content: space-around;
+}
 
-    /* Html Styles  */
-    html {
-        font-size: 16px;/* adjust rem for tablet */
+button {
+    font-size: 1rem;
+    padding: .6rem;
+    background: linear-gradient(orange, yellow);
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+/*  --- Responsive Media Queries  ---   */
+
+/*  Mobile styles (max-width: 600px) */
+@media (max-width: 600px) {
+    .name {
+        font-size: 3rem;
     }
 
-     /* Header Styles */
-     .header {
-        height: 8rem; /* Reduce header */
-    }
-
-    /* Logo Name */
-    .logo-name { 
-        font-size: 2.5rem; 
-    }
-
-    #portfolio-logo-black {
-        font-size: 2rem;
-        margin-top: .5rem;
-    }
-
-    /*Navbar Styles*/
-
-    .navbar {
-        padding: 0.75rem;
-        margin-top: .5rem;
+    .page-name {
+        font-size: 1.5rem;
     }
 
     .navbar ul {
-        gap: 2rem; /* Spacing for 
-        margin: auto; */
-        }
-
-    /* Navbar Links */
-    .navbar li a{
-        font-size: 1.175rem;
-        
+        flex-direction: column;
+        gap: 1.25rem;
     }
 
-    /*  Hero Intro Container  */
-    
-    .hero-intro-container {
-        width: 100%;/*   ---- Adjusted width for tablet ----  */
+    .navbar li a {
+        font-size: 1.25rem
+
     }
 
-    .hero-intro-container h1 {
-        font-size: 1.5rem;
+        /*  Animation for scroll warning */
+    .scrolling-banner-container {
+        position: absolute;
+        top: 2rem;
+        animation: moveLeft 10s linear infinite;
+        color: black;
+        font-size: 1rem;
     }
 
-    /* Hero Icons */
-    .hero-icon-container img {
-    width: 2.2rem;
-    height: 2.2rem;
-    border: 1px solid white;
-    box-shadow: -2px 2px 8px black;
-}
-}
-
-/* Media Queries for mobile */
-@media (max-width: 425px) {
-
-    html {
-        font-size: 14px;
+    /* Airplane image from https://clipart-library.com/clip-art/airplane-clipart-transparent-18.htm */
+    #banner img {
+        width: 2.5rem;
+        height: 2.1rem;
     }
 
-    header {
-        background: radial-gradient(white 15%, black 40%);
+    .main-content {
+        margin-top: 3rem;
     }
 
-    /* Logo Name */
-    .logo-name { 
-        font-size: 2.5rem; /* Lower font size */
-    }
-    /*Navbar Styles*/
-
-    .navbar {
-        margin-top: .8rem;/* Lower margin amount */
-    }
-
-
-    /* Navbar Links */
-    .navbar li a{
-        font-size: 1.175rem; /* Lower font size */
-    }
-
-
-    /*Shadow Effects for Navbar Links */
-
-    .border-bottom-coral  {
-        border-bottom: 1px solid coral;
-    }
-
-    .border-bottom-springgreen {
-        border-bottom: 1px solid springgreen;
-    }
-
-    .border-bottom-skyblue {
-        border-bottom: 1px solid skyblue;
-    }
-
-    .border-bottom-tan  {
-        border-bottom: 1px solid tan;
-    }
-
-
-
-
-    /* Hero Intro Container */
-    .hero-intro-container {
-        width: 20rem; /* Create width for text on mobile */
-    }
-
-    /* Hero Text Styles */
-    .hero-intro-container h1 {
-        font-size: 1.5rem;
-    }
-    .hero-intro-container h2 {
-        font-size: 1rem; /* Reduce size for mobile */
-        text-align: justify;
-    }
-
-    /* Hero Icon Container */
-    .hero-icon-container {
+    .landing-pages-intro {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        margin-top: 5rem;
-    }
-
-    /* Hero Icons */
-    .hero-icon-container img {
-        display: block;
-        width: 2.5rem; /* Reduce size of Icons */
-        height: 2.5rem; /* Reduce size of Icons */
-        padding: 0.55rem;
-        border: 2px solid white;
-        box-shadow: -3px 3px 10px black;
-    }
-
-        /*Skyline section */
-    .skyline {
-        display: flex;
-        width: 100%; /* Responsive width */
-        max-width: 22.22rem; /* Max width for larger screens */
-        height: 8.33rem; /* Set the height of the skyline */
-        margin: auto;
-        background-color: transparent;
-        overflow: hidden; /* Prevent overflow */
-        transform: rotate(180deg);
-    }
-
-    /* Building Styles*/
-    .building-color {
-        background-color: #000; /* Building color */
-        margin: 0 .111rem; /* Spacing between buildings */
-        position: relative;
-        bottom: 1px; /* Align buildings to the bottom */
-    }
-
-    /* Footer Section*/
-    footer {
-        background-color: black;
-        color: tan;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 18rem;
         text-align: center;
+        margin: 1rem;
+    }
+    
+    .landing-pages-intro h1 {
+        font-size: 3rem;
+    }
+    
+    .landing-pages-intro h2 {
+        font-size: 2rem;
+    }
+    
+    .landing-pages-container {
+        text-align: center;
+        margin: 1rem 0 6rem 0;
+    }
+    
+    
+    /*  Individual Page Section Styles   */
+    .page-halloween24 {
+        background: linear-gradient(#111, #666);
+        color: white;
+    }
+    
+    .page-link-heading {
         width: 100%;
-        padding: .5rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: .3rem;
+        font-weight: 600;
+        font-size: 2rem;
+        margin: auto;
+        padding: 1rem;
+    }
+    
+    .main-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+    }
+    
+    .page-link-photo {
+        background-image: url(./resources/images/halloween24.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 3px solid black;
+        width: 17rem;
+        height: 20rem;
+        margin-top: 1.5rem;
+    }
+    
+    .page-link-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .page-link-description {
+        font-size: 1.75rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: .3rem;
+        line-height: 1.75rem;
+        letter-spacing: .2rem;
+    
+    }
+    
+    .link-buttons {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    button {
+        font-size: 1rem;
+        padding: .6rem;
+        background: linear-gradient(orange, yellow);
+    }
+    
+    button a {
+        text-decoration: none;
+        color: black;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet styles  (min-width: 601px and max-width: 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .name {
+        font-size: 6rem;
+    }
+
+    .page-name {
+        font-size: 2rem;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .navbar li a {
+        font-size: 1.8rem;
+    }
+
+    @keyframes moveLeft {
+        0% {
+            right: -100%;
+        }
+        100% {
+            right: 100%;
+            transform: translateX(-120rem);
+        }
+    }
+
+    .landing-pages-intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro-container p {
+        font-size: 1.2rem;
+        width: 70%;
+    }
+
+    .dropdown select {
+        font-size: 1.1rem;
+        width: 80%;
+    }
+
+    .hero-icon-container {
+        gap: 2rem
+    }
+
+    .hero-icon-container img{
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/* Laptop styles  (min-width: 901px and max-width: 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+    .name {
+        font-size: 7rem;
+    }
+
+    .page-name {
+        font-size: 2.5rem;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .navbar li a {
+        font-size: 1.9rem;
+    }
+
+    .intro-container h1 {
+        font-size: 3.5rem;
+    }
+
+    .intro-container p {
+        font-size: 1.3rem;
+        width: 60%;
+    }
+
+    .dropdown select {
+        font-size: 1.2rem;
+        width: 75%;
+    }
+
+    .hero-icon-container {
+        gap: 2.5rem
+    }
+
+    .hero-icon-container img{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+/* Tablet styles  min-width: 1201px */
+@media (min-width: 1201px) {
+    .name {
+        font-size: 8.25rem;
+    }
+
+    .page-name {
+        font-size: 3rem;
+    }
+
+    .navbar ul {
+        gap: 3rem;
+    }
+
+    .navbar li a {
+        font-size: 2rem;
+    }
+
+    .intro-container h1 {
+        font-size: 4rem;
+    }
+
+    .intro-container p {
+        font-size: 1.5rem;
+        width: 55%;
+    }
+
+    .dropdown select {
+        font-size: 1.2rem;
+        width: 60%;
+    }
+
+    .hero-icon-container {
+        gap: 3rem
+    }
+
+    .hero-icon-container img{
+        width: 4rem;
+        height: 4rem;
     }
 }

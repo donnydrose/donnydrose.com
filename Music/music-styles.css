@@ -1,32 +1,459 @@
+/* Base Font Size */
+html {
+    font-size: 18px;/* Setting the document rem size*/
+}
 
-/* Body Styles */
 body {
-    background: linear-gradient(black 12rem, coral);
+    background: linear-gradient( #c9d9f1 14rem, white 85%, #c93 99%); /*set textured background*/
+    overflow-x: hidden; /* Prevent scrollbar due to airplane animation*/
 }
 
+/* Header Styles */
 .header {
-    background: radial-gradient(coral 15%, black 40%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    height: 37rem;
+    width: 100%;
+    background-image: url(./../resources/images/Donny\ Drose.png);
+    background-size: contain;
 }
 
-.main-content {
+/*Name Styles */
+.name { 
+    font-family: serif;
+    font-size: 8.25rem; 
+    line-height: 0.75;
+    letter-spacing: 0.055rem;
+}
+
+.name a {
+    color: white;
+}
+
+.page-name {
+    text-align: center;
+    color: #c93;
+    font-size: 3rem;
+    font-family: cursive;
+    margin-top: 3rem;
+}
+
+/*  Animation for scroll warning */
+.scrolling-banner-container {
+    position: absolute;
+    top: 3rem;
+    animation: moveLeft 10s linear infinite;
+    color: black;
+    font-size: 2.5rem;
+}
+
+/* Animation for scrolling banner */
+
+@keyframes moveLeft {
+    0% {
+        right: -100%;
+    }
+    100% {
+        right: 100%;
+        transform: translateX(-80rem);
+    }
+}
+
+/* Airplane image from https://clipart-library.com/clip-art/airplane-clipart-transparent-18.htm */
+#banner img {
+    width: 5rem;
+    height: 4rem;
+    display: inline;
+    vertical-align: middle;
+}
+
+/*  Line up img and text */
+.scrolling-banner-container h2 {
+    display: inline;
+}
+
+/*  Create a banner look */
+.scrolling-banner-container span {
+    background-color: whitesmoke;
+    color: #333;
+    padding: .2rem 1rem;
+}
+
+.navbar {
     width: 100%;
 }
 
+/*Navbar Styles*/
+.navbar ul {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+
+}
+
+/* Navbar Links */
+.navbar li a {
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: -1px 1px 1px #444;
+}
+
+a {
+text-decoration: none;
+}
+
+@keyframes linkColorChange {
+    0%{color: whitesmoke;}
+    50%{color: var(--link-color, blue);}
+    55%{color: whitesmoke;}
+    }
+
+/* Design link  */
+.link-animation-design a {
+    animation: linkColorChange 5s infinite;
+    --link-color: #39f;
+}
+
+/* Blog link */
+.link-animation-blog a {
+    animation: linkColorChange 5s infinite;
+    --link-color: #6c6;
+}
+
+/* Music link */
+.link-animation-home a {
+    animation: linkColorChange 5s infinite;
+    --link-color: #111;
+}
+
+/* Contact link */
+.link-animation-contact a {
+    animation: linkColorChange 5s infinite;
+    --link-color: #a30;
+}
+
+
+/* Hover effects for navigation links */
+.hover-home a:hover {
+    border-bottom: 3px solid #111;
+}
+
+.hover-blog a:hover {
+    border-bottom: 3px solid #6c6;
+}
+
+.hover-design a:hover {
+    border-bottom: 3px solid #39f;
+}
+
+.hover-contact a:hover {
+    border-bottom: 3px solid #a30;
+}
+/*       Main Content Section     */
+.main-content {
+    margin-top: 10rem;
+}
 .main-content h1 {
+    color: black;
     text-align: center;
-    color: white;
+    font-size: 3rem;
 }
 
-#scrollText h2 {
-    color: white;
+
+.landing-pages-intro {
+    text-align: center;
+    margin: 6rem;
 }
 
+.landing-pages-intro h2, .landing-page h3 {
+    color: black;
+
+}
+
+.landing-page h3 {
+    width: 100%;
+}
+
+.landing-page p {
+    width: 50%;
+}
+
+.landing-pages-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+    margin: 1rem 0 6rem 0;
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+}
+
+.page-link-container {
+    border: 3px solid black;
+    width: 15rem;
+    height: 20rem;
+    background: radial-gradient(#bbddff 15%, black 90%);
+    margin-top: 1.5rem;
+}
 .song-container {
-    margin-top: 12rem;
-}
-
-.song {
+    margin: 3rem auto;
     width: 60%;
-    margin: auto;
+    outline: 12px solid #c93;
 }
 
+.song-container:hover {
+    outline: 4px solid #c93;
+ }
+
+
+ /*  --- Responsive Media Queries  ---   */
+
+/*  Mobile styles (max-width: 600px) */
+@media (max-width: 600px) {
+    .header {
+        height: 12rem;
+    }
+
+    .name {
+        font-size: 3rem;
+        margin-top: 4rem;
+    }
+
+    .page-name {
+        font-size: 1.5rem;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        gap: 1.25rem;
+        margin-top: 1.5rem;
+    }
+
+    .navbar li a {
+        font-size: 1.25rem
+
+    }
+
+    /*  Animation for scroll warning */
+    .scrolling-banner-container {
+        position: absolute;
+        top: 2rem;
+        animation: moveLeft 10s linear infinite;
+        color: black;
+        font-size: 1rem;
+    }
+
+    /* Airplane image from https://clipart-library.com/clip-art/airplane-clipart-transparent-18.htm */
+    #banner img {
+        width: 2.5rem;
+        height: 2.1rem;
+    }
+
+    .intro-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-container p {
+        font-size: 1rem;
+        width: 85%;
+    }
+
+    .dropdown select {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    .hero-icon-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet styles  (min-width: 601px and max-width: 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .header {
+        height: 25rem;
+    }
+    
+    .name {
+        font-size: 6rem;
+    }
+
+    .page-name {
+        font-size: 2rem;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .navbar li a {
+        font-size: 1.8rem;
+    }
+
+    @keyframes moveLeft {
+        0% {
+            right: -100%;
+        }
+        100% {
+            right: 100%;
+            transform: translateX(-120rem);
+        }
+    }
+
+    .intro-container h1 {
+        font-size: 3rem;
+    }
+
+    .intro-container p {
+        font-size: 1.2rem;
+        width: 70%;
+    }
+
+    .dropdown select {
+        font-size: 1.1rem;
+        width: 80%;
+    }
+
+    .hero-icon-container {
+        gap: 2rem
+    }
+
+    .hero-icon-container img{
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/* Laptop styles  (min-width: 901px and max-width: 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+    .header {
+        height: 32rem;
+    }
+    
+    .name {
+        font-size: 7rem;
+    }
+
+    .page-name {
+        font-size: 2.5rem;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .navbar li a {
+        font-size: 1.9rem;
+    }
+
+    @keyframes moveLeft {
+        0% {
+            right: -100%;
+        }
+        100% {
+            right: 100%;
+            transform: translateX(-100rem);
+        }
+    }
+
+    .intro-container h1 {
+        font-size: 3.5rem;
+    }
+
+    .intro-container p {
+        font-size: 1.3rem;
+        width: 60%;
+    }
+
+    .dropdown select {
+        font-size: 1.2rem;
+        width: 75%;
+    }
+
+    .hero-icon-container {
+        gap: 2.5rem
+    }
+
+    .hero-icon-container img{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+/* Tablet styles  min-width: 1201px */
+@media (min-width: 1201px) {
+    .name {
+        font-size: 8.25rem;
+    }
+
+    .page-name {
+        font-size: 3rem;
+    }
+
+    .navbar ul {
+        gap: 3rem;
+    }
+
+    .navbar li a {
+        font-size: 2rem;
+    }
+
+    @keyframes moveLeft {
+        0% {
+            right: -100%;
+        }
+        100% {
+            right: 100%;
+            transform: translateX(-100rem);
+        }
+    }
+
+    .intro-container h1 {
+        font-size: 4rem;
+    }
+
+    .intro-container p {
+        font-size: 1.5rem;
+        width: 55%;
+    }
+
+    .dropdown select {
+        font-size: 1.2rem;
+        width: 60%;
+    }
+
+    .hero-icon-container {
+        gap: 3rem
+    }
+
+    .hero-icon-container img{
+        width: 4rem;
+        height: 4rem;
+    }
+}
