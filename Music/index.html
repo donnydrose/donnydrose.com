@@ -8,52 +8,101 @@
         <link rel="stylesheet" href="../Home/footer-skyline-styles.css">
         <link rel="stylesheet" href="../Home/scrolling-effect-styles.css">
         <link rel="stylesheet" href="../Music/music-styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
       </head>
       <body>
         <!-- Header section containing name and navigation -->
        <header class="header"> 
-        <!-- Container for name  -->
-        <div class="name-container">
-            <!--Link to contact page-->
-            <div class="name"><a href="../Contact/index.html" target="_blank">donny d rose</a>
-            </div>
-            <div class="page-name">Music</div>
-        </div> 
-            <!-- Navigation container-->
-        <nav class="navbar">
-          <ul>
-              <!--Navigation links to different sections of the website-->
-              <li class="hover-design link-animation-design"><a href="../Design/index.html" target="_blank" rel="noopener noreferrer">Design</a></li>
-              <li class="hover-blog link-animation-blog"><a href="../Blog/index.html" target="_blank">Blog</a></li> 
-              <li class="hover-contact link-animation-contact"><a href="../Contact/index.html" target="_blank">Contact</a></li>
-              <li class="hover-home link-animation-home"><a href="../index.html" target="_blank">Home</a></li>
-          </ul>
-       </nav>
-</header>
-    <!--Main content  -->
-<main class="main-content"> 
-  <h1>New Music Coming in 2025!!</h1>
-              <!--Container for a CSS artwork of a city skyline  -->
-              <section class="skyline-container"> 
-                  <div class="skyline">
-                    <!-- Individual Building Elements  -->
-                    <div class="building-color building-1"></div>
-                    <div class="building-color building-2"></div>
-                    <div class="building-color building-3"></div>
-                    <div class="building-color building-4"></div>
-                    <div class="building-color building-5"></div>
-                    <div class="building-color building-6"></div>
-                    <div class="building-color building-7"></div>
-                    <div class="building-color building-8"></div>
-                    <div class="building-color building-9"></div>
-                    <div class="building-color building-10"></div>
-                  </div>
-              </section>
-        </main><!-- Footer section -->
-        <footer>
-            <p>© 2024 Donny D Rose. All rights reserved.</p>
-          </footer>
-          <script src="../Home/scrolling-effect.js"></script><!--Link to Javascript function-->    
+        
+          <!-- Container for name  -->
+          <div class="name-container">
+              <!--Link to contact page-->
+              <div class="name"><a href="../Contact/index.html">donny d. rose</a>
+              </div>
+              <div class="page-name">Music</div>
+          </div> 
+          
+              <!-- Navigation container-->
+          <nav class="navbar">
+            <ul>
+                <!--Navigation links to different sections of the website-->
+                <li class="hover-design link-animation-design"><a href="../Design/index.html" rel="noopener noreferrer">Design</a></li>
+                <li class="hover-blog link-animation-blog"><a href="../Blog/index.html">Blog</a></li> 
+                <li class="hover-contact link-animation-contact"><a href="../Contact/index.html">Contact</a></li>
+                <li class="hover-home link-animation-home"><a href="../index.html">Home</a></li>
+            </ul>
+          </nav>
+      </header>
+          <!--Main content  -->
+      <main class="main-content"> 
+        <!-- Pre-scroll content-->
+        <div id="scroll-text">&#8595; &#8595;
+        </div>
+      <!-- Hidden container-->
+        <div class="hidden music-container">
+              <!--  Coming Soon Section  New Song Ad -->
+            <section class="coming-soon singles-container"> 
+              <article>
+                  <h1>"Sparrow"</h1>
+                  <h3>March 5, 2025 </h3>
+                <div class="singles-image-container"></div>
+              </article>
+            </section>
+            <!--  Donny's Song Journal Section  -->
+            <section class="song-journal-container">
+              <h2>Donny's Song Journal</h2>
+              <p class="script">The Pond</p>
+              <article class="song-post"> 
+                <h4>December 10, 2024</h4>
+               <p>Let my past flow through me for it has shaped who I am today and guides me in the present</p>
+                <audio src="../Music/resources/audio/dec10ThePast.mp3" controls=""></audio>
+              </article>
+              <article class="song-post">
+                <h4>December 12, 2024</h4>
+                <p>Acceptance of the dark leads to guidance</p>
+                <audio src="../Music/resources/audio/dec12AcceptanceOfTheDark.mp3" controls=""></audio>
+              </article>
+              <article class="song-post">
+                <h4>December 17, 2024</h4>
+                <p>Everything after breath is a bonus</p>
+                <audio src="../Music/resources/audio/dec17EverythingElseBonus.mp3" controls=""></audio>
+              </article>
+            </section>
+            <div class="spacer"></div>
+             <!--  Songs Section Older songs -->
+           <!-- <section class="coming-soon singles-container"> 
+              <article>
+                  <h1>"Sparrow"</h1>
+                  <h2>New Single</h2>
+                  <h3>March 5, 2025</h3>
+                <div class="singles-image-container"></div>
+              </article>
+            </section>  -->
+        </div>
+        <!--Container for a CSS artwork of a city skyline-->
+        <section class="skyline-container"> 
+          <div class="skyline">
+              <!-- Individual Building Elements-->
+              <div class="building-color building-1"></div>
+              <div class="building-color building-2"></div>
+              <div class="building-color building-3"></div>
+              <div class="building-color building-4"></div>
+              <div class="building-color building-5"></div>
+              <div class="building-color building-6"></div>
+              <div class="building-color building-7"></div>
+              <div class="building-color building-8"></div>
+              <div class="building-color building-9"></div>
+              <div class="building-color building-10"></div>
+          </div>
+        </section>
+      </main>
+      <!-- Footer section -->
+      <footer>
+          <p>© 2024 Donny D Rose. All rights reserved.</p>
+      </footer>
+      <script src="../Home/scrolling-effect.js"></script><!--Link to Javascript function-->    
           
       </body>
 </html>

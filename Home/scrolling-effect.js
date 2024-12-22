@@ -1,7 +1,7 @@
 
 
   document.addEventListener("scroll", function() {
-const scrollText = document.getElementById("scrollText");
+const scrollText = document.getElementById("scroll-text");
 if (window.scrollY > 10) { // When the user scrolls more than 50px
     scrollText.style.opacity = '0'; // Fade out the text
 } 

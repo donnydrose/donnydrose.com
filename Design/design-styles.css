@@ -1,31 +1,29 @@
 
-    /* Base Font Size */
+/* Base Font Size */
 html {
     font-size: 18px;/* Setting the document rem size*/
-    
 }
 
 body {
-    background: linear-gradient( #c9d9f1 14rem, white 85%, #39f 95%); /*set textured background*/
-    overflow-x: hidden; /* Prevent scrollbar due to airplane animation*/
+    background: linear-gradient(to bottom, #2d4d8e, #aab, #2d4d8e);/*set textured background*/
 }
 
 /* Header Styles */
 .header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    height: 27rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 21rem;
 }
 
-/*Name Styles */
+/*   Name Styles */
 .name { 
     font-family: serif;
     font-size: 8.25rem; 
     line-height: 0.75;
     letter-spacing: 0.055rem;
+    margin-top: 6rem;
 }
 
 .name a {
@@ -34,65 +32,23 @@ body {
 
 .page-name {
     text-align: center;
-    color: #39f;
+    color: #000;
     font-size: 3rem;
     font-family: Helvetica, sans-serif;
-    margin-top: 3rem;
-}
-
-/*  Animation for scroll warning */
-.scrolling-banner-container {
-    position: absolute;
-    top: 3rem;
-    animation: moveLeft 10s linear infinite;
-    color: black;
-    font-size: 2.5rem;
-}
-
-/* Animation for scrolling banner */
-
-@keyframes moveLeft {
-    0% {
-        right: -100%;
-    }
-    100% {
-        right: 100%;
-        transform: translateX(-80rem);
-    }
-}
-
-/* Airplane image from https://clipart-library.com/clip-art/airplane-clipart-transparent-18.htm */
-#banner img {
-    width: 5rem;
-    height: 4rem;
-    display: inline;
-    vertical-align: middle;
-}
-
-/*  Line up img and text */
-.scrolling-banner-container h2 {
-    display: inline;
-}
-
-/*  Create a banner look */
-.scrolling-banner-container span {
-    background-color: whitesmoke;
-    color: #333;
-    padding: .2rem 1rem;
+    margin: 3rem;
 }
 
 .navbar {
-    width: 100%;
+    width: 60%;
+    padding: 1rem 0rem;
 }
-
 /*Navbar Styles*/
 .navbar ul {
     display: flex; 
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     list-style-type: none;
-    gap: 3rem;
 }
 
 /* Navbar Links */
@@ -100,115 +56,67 @@ body {
     font-family: sans-serif;
     font-size: 2rem;
     font-weight: 500;
-    color: #fff;
-    text-shadow: -1px 1px 1px #444;
 }
 
 a {
 text-decoration: none;
 }
 
+/*  Animation for Nav Links   -linkColorChange */ 
 @keyframes linkColorChange {
-    0%{color: whitesmoke;}
-    50%{color: var(--link-color, blue);}
-    55%{color: whitesmoke;}
-    }
-
-/* Home link  */
-.link-animation-home a {
-    animation: linkColorChange 5s infinite;
-    --link-color: #111;
+    0%{color: #111;}
+    50%{color: var(--link-color, #111);}
+    100%{color: #111;}
 }
 
-/* Blog link */
+.link-animation-design a {
+    animation: linkColorChange 3s infinite;
+    --link-color: #609;
+}
+
 .link-animation-blog a {
-    animation: linkColorChange 5s infinite;
-    --link-color: #6c6;
+    animation: linkColorChange 6s infinite;
+    --link-color: #afa;
 }
 
-/* Music link */
 .link-animation-music a {
     animation: linkColorChange 5s infinite;
+    --link-color: #38f;
+}
+
+.link-animation-contact a {
+    animation: linkColorChange 8s infinite;
     --link-color: #c93;
 }
 
-/* Contact link */
-.link-animation-contact a {
-    animation: linkColorChange 5s infinite;
-    --link-color: #a30;
-}
-
-
-/* Hover effects for navigation links */
-.hover-music a:hover {
-    border-bottom: 3px solid #c93;
-}
-
-.hover-blog a:hover {
-    border-bottom: 3px solid #6c6;
-}
-
-.hover-home a:hover {
-    border-bottom: 3px solid #111;
-}
-
-.hover-contact a:hover {
-    border-bottom: 3px solid #a30;
-}
-
-
 /*       Main Content Section     */
-.main-content {
-    margin-top: 6rem;
-    text-align: center;
-}
 
 .landing-pages-intro {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 24rem;
-    text-align: center;
-    margin: 6rem auto;
+    justify-content: center;
+    width: 100%;
+    text-align: left;
+    margin: 18rem auto;
+    line-height: 2rem;
+    gap: 1rem;
 }
 
 .landing-pages-intro h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    color: #333;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .landing-pages-intro h2 {
     font-size: 2rem;
+    color: #333;
+    width: 50%;
+    margin: 0 auto;
 }
 
-.landing-pages-intro p {
-    font-size: 1.25rem;
-    margin: auto;
-    line-height: 1.8rem;
-
-}
-
-.landing-pages-container {
-    text-align: center;
-    margin: 1rem 0 6rem 0;
-}
-
-
-/*  Individual Page Section Styles   */
-.page-halloween24 {
-    background: linear-gradient(#111, #666);
-    color: white;
-}
-
-.page-link-heading {
-    width: 100%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: .3rem;
-    font-weight: 600;
-    font-size: 2rem;
-    margin: auto;
-    padding: 1rem;
-}
-
+/*
 .main-box {
     display: flex;
     flex-direction: row;
@@ -258,69 +166,69 @@ button {
 button a {
     text-decoration: none;
     color: black;
-}
-/*  --- Responsive Media Queries  ---   */
+}*/
 
+.skyline {
+    background: radial-gradient(circle at top, #ddd 35%, transparent 37%)
+}
+
+
+footer {
+    box-shadow: -30px -10px 60px #ddd;
+    height: 18rem;
+}
+
+/*  --- Responsive Media Queries  ---   */
 /*  Mobile styles (max-width: 600px) */
 @media (max-width: 600px) {
+    .header {
+        height: 20rem;
+    }
     .name {
         font-size: 3rem;
     }
 
     .page-name {
         font-size: 1.5rem;
+        margin-top: 2rem;
     }
 
     .navbar ul {
-        flex-direction: column;
-        gap: 1.25rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3.5rem;
     }
 
     .navbar li a {
-        font-size: 1.25rem
+        font-size: 1.1rem
 
-    }
-
-        /*  Animation for scroll warning */
-    .scrolling-banner-container {
-        position: absolute;
-        top: 2rem;
-        animation: moveLeft 10s linear infinite;
-        color: black;
-        font-size: 1rem;
-    }
-
-    /* Airplane image from https://clipart-library.com/clip-art/airplane-clipart-transparent-18.htm */
-    #banner img {
-        width: 2.5rem;
-        height: 2.1rem;
-    }
-
-    .main-content {
-        margin-top: 3rem;
     }
 
     .landing-pages-intro {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 18rem;
         text-align: center;
-        margin: 1rem;
+        width: 90%;
+        line-height: 1.5rem;
+        margin-top: 18rem;
     }
+    
     
     .landing-pages-intro h1 {
-        font-size: 3rem;
+        font-size: 1.5rem;
+        color: #333;
+        width: 100%;
+        margin: 0 auto;
     }
-    
+
     .landing-pages-intro h2 {
-        font-size: 2rem;
+        font-size: 1rem;
+        color: #333;
+        width: 100%;
+        margin: 0 auto;
     }
     
-    .landing-pages-container {
-        text-align: center;
-        margin: 1rem 0 6rem 0;
-    }
     
     
     /*  Individual Page Section Styles   */
@@ -397,6 +305,7 @@ button a {
         text-align: center;
         padding: 10px;
         font-size: 0.9rem;
+        height: 9rem;
     }
 }
 

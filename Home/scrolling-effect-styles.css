@@ -1,12 +1,10 @@
-#scrollText {
-    height: 6rem;
+#scroll-text {
     text-align: center;
     opacity: 1;
     transition: opacity 0.3s ease-out;
 }
 
-#scrollText h2 {
-    color: white;
+#scroll-text h2 {
     font-weight: 100;
 }
 

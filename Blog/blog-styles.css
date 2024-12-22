@@ -5,26 +5,25 @@ html {
 }
 
 body {
-    background: linear-gradient( #c9d9f1 14rem, white 95%, #cfc 96%); /*set textured background*/
-    overflow-x: hidden; /* Prevent scrollbar due to airplane animation*/
+    background: linear-gradient(to bottom, #2d4d8e, #ddf, #2d4d8e);/*set textured background*/
 }
 
 /* Header Styles */
 .header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    height: 27rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 21rem;
 }
 
-/*Name Styles */
+/*   Name Styles */
 .name { 
     font-family: serif;
     font-size: 8.25rem; 
     line-height: 0.75;
     letter-spacing: 0.055rem;
+    margin-top: 6rem;
 }
 
 .name a {
@@ -33,62 +32,21 @@ body {
 
 .page-name {
     text-align: center;
-    color: #6c6;
+    color: #afa;
     font-size: 3rem;
-    font-family: serif;
-    margin-top: 3rem;
-}
-
-/*  Animation for scroll warning */
-.scrolling-banner-container {
-    position: absolute;
-    top: 3rem;
-    animation: moveLeft 10s linear infinite;
-    color: black;
-    font-size: 2.5rem;
-}
-
-/* Animation for scrolling banner */
-
-@keyframes moveLeft {
-    0% {
-        right: -100%;
-    }
-    100% {
-        right: 100%;
-        transform: translateX(-80rem);
-    }
-}
-
-/* Airplane image from https://clipart-library.com/clip-art/airplane-clipart-transparent-18.htm */
-#banner img {
-    width: 5rem;
-    height: 4rem;
-    display: inline;
-    vertical-align: middle;
-}
-
-/*  Line up img and text */
-.scrolling-banner-container h2 {
-    display: inline;
-}
-
-/*  Create a banner look */
-.scrolling-banner-container span {
-    background-color: whitesmoke;
-    color: #333;
-    padding: .2rem 1rem;
+    font-family: Helvetica, sans-serif;
+    margin: 3rem;
 }
 
 .navbar {
-    width: 100%;
+    width: 60%;
+    padding: 1rem 0rem;
 }
-
 /*Navbar Styles*/
 .navbar ul {
     display: flex; 
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     list-style-type: none;
 }
@@ -98,119 +56,89 @@ body {
     font-family: sans-serif;
     font-size: 2rem;
     font-weight: 500;
-    color: #fff;
-    text-shadow: -1px 1px 1px #444;
 }
 
 a {
 text-decoration: none;
 }
 
+/*  Animation for Nav Links   -linkColorChange */ 
 @keyframes linkColorChange {
-    0%{color: whitesmoke;}
-    50%{color: var(--link-color, blue);}
-    55%{color: whitesmoke;}
-    }
+    0%{color: #111;}
+    50%{color: var(--link-color, #111);}
+    100%{color: #111;}
+}
 
-/* Design link  */
 .link-animation-design a {
-    animation: linkColorChange 10s infinite;
-    --link-color: #39f;
+    animation: linkColorChange 3s infinite;
+    --link-color: #609;
 }
 
-/* Blog link */
 .link-animation-home a {
-    animation: linkColorChange 10s infinite;
-    --link-color: #111;
+    animation: linkColorChange 6s infinite;
+    --link-color: #777;
 }
 
-/* Music link */
 .link-animation-music a {
-    animation: linkColorChange 10s infinite;
+    animation: linkColorChange 5s infinite;
+    --link-color: #38f;
+}
+
+.link-animation-contact a {
+    animation: linkColorChange 8s infinite;
     --link-color: #c93;
 }
 
-/* Contact link */
-.link-animation-contact a {
-    animation: linkColorChange 10s infinite;
-    --link-color: #a30;
-}
-
-
-/* Hover effects for navigation links */
-.hover-contact a:hover {
-    border-bottom: 3px solid #a30;
-}
-
-.hover-home a:hover {
-    border-bottom: 3px solid #111;
-}
-
-.hover-design a:hover {
-    border-bottom: 3px solid #39f;
-}
-
-.hover-music a:hover {
-    border-bottom: 3px solid #c93;
-}
-
-/* Hero Icon background colors */
-
-#coral {
-    background-color: coral;
-}
-
-#springgreen {
-    background-color: springgreen;
-}
-
-#skyblue {
-    background-color: dodgerblue;
-}
-
-#tan {
-    background-color: goldenrod;
-}
 
 /*       Main Content Section     */
 .main-content {
-    margin-top: 10rem;
-}
-.main-content h1 {
-    color: black;
-    text-align: center;
+    margin-top: 7rem;
 }
 
-.blog-container h1 {
-    color: black;
-    font-size: 3rem;
-    text-align: center;
+
+.title {
+    display: flex; 
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.blog-container h2 {
-    color: black;
-    text-align: center;
-}
-
-/* Hero container styles */
 .blog-container {
-    max-width: 45rem;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 6rem;
     margin: auto;
     padding: 1rem;
 }
+
+.blog-container h1 {
+    color: black;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.blog-container h2 {
+    width: 70%;
+    color: black;
+    text-align: center;
+    font-size: 1.75rem;
+    margin: auto;
+}
+
+
 
 .blog-post {
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    gap: 2rem;
     margin-bottom: 1.5rem;
     background: linear-gradient(#efe, #ded, #efe);
     border: 0.25rem solid #111;
+    box-shadow: -15px 5px 19px black;
+    margin: auto;
 }
 
 
@@ -231,7 +159,6 @@ text-decoration: none;
 
 .blog-post p {
     width: 100%;
-    padding: 1rem;
     font-family: sans-serif;
     font-weight: 400;
     font-size: 1rem;
@@ -239,6 +166,47 @@ text-decoration: none;
     color: #222;
 }
 
+.blog-post .blog-post-cta a{
+    color: coral;
+    padding-top: 2rem;  
+    font-size: 1rem;
+}
+
+            /* blog post #2  */
+.blog-post aside .creepster-regular {
+    font-family: "Creepster", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .5rem;
+    font-size: 2.5rem;
+    color: orangered;
+    border-bottom: 5px solid orangered;
+    box-shadow: -5px 0px 10px orangered;
+  }
+
+  .blog-post .creepster-regular {
+    font-family: "Creepster", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.75rem;
+  }
+
+.spooky-video-holder video {
+    display: block;
+     width: 16rem;
+    height: 20rem;
+    margin: auto;
+    border-bottom: 5px solid orangered;
+    box-shadow: 1px 0px 30px orangered;
+}
+.spooky-image-holder img{
+   display: block;
+   width: 75%;
+   margin: auto;
+   border-bottom: 5px solid coral;
+    box-shadow: 1px 0px 30px coral;
+}
+/* Blog post #4 */
 
 .websiteRefreshed {
     display: flex;
@@ -246,6 +214,7 @@ text-decoration: none;
     justify-content: space-around;
     align-items: center;
     gap: 3rem;
+    text-align: center;
 }
 
 .websiteRefreshed img {
@@ -253,53 +222,133 @@ text-decoration: none;
     height: 20rem;
     border: 2px solid black;
 }
+
+
+.spacer {
+    height: 3rem;
+}
+
+.skyline {
+    background: radial-gradient(circle at top, #ded 25%, transparent 37%)
+}
+
+footer {
+    box-shadow: -30px -10px 60px #ded;
+    height: 18rem;
+}
 /*  --- Responsive Media Queries  ---   */
 
 /*  Mobile styles (max-width: 600px) */
 @media (max-width: 600px) {
+    .header {
+        height: 20rem;
+        justify-content: center;
+    }
     .name {
         font-size: 3rem;
+        margin-top: 3rem;
     }
 
     .page-name {
         font-size: 1.5rem;
     }
 
-    .navbar ul {
-        flex-direction: column;
-        gap: 1.25rem;
-    }
-
     .navbar li a {
-        font-size: 1.25rem
-
+        padding: 0.5rem;
+        font-size: 1.1rem;
+        margin: 0.5rem;
     }
 
-    /*  Animation for scroll warning */
-    .scrolling-banner-container {
-        position: absolute;
-        top: 2rem;
-        animation: moveLeft 10s linear infinite;
+    .main-content {
+        margin-top: 1rem;
+    }
+
+    
+
+    .blog-container {
+        width: 75%;
+    }
+
+    .blog-container h1 {
         color: black;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .blog-container h2 {
+        width: 70%;
+        color: black;
+        text-align: center;
+        font-size: 1.25rem;
+        margin: auto;
+    }
+
+                    /* blog post #2  */
+    .blog-post aside .creepster-regular {
+        font-family: "Creepster", serif;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: .3rem;
+        font-size: 1.5rem;
+        color: orangered;
+        border-bottom: 5px solid orangered;
+        box-shadow: -5px 0px 10px orangered;
+    }
+
+    .blog-post .creepster-regular {
+        font-family: "Creepster", serif;
+        font-weight: 400;
+        font-style: normal;
         font-size: 1rem;
     }
 
-    /* Airplane image from https://clipart-library.com/clip-art/airplane-clipart-transparent-18.htm */
-    #banner img {
-        width: 2.5rem;
-        height: 2.1rem;
+    .spooky-video-holder video {
+        display: block;
+        width: 9rem;
+        height: 10rem;
+        margin: auto;
+        border-bottom: 5px solid orangered;
+        box-shadow: 1px 0px 30px orangered;
+    }
+    .spooky-image-holder img{
+        display: block;
+        width: 75%;
+        margin: auto;
+        border-bottom: 5px solid orangered;
+        box-shadow: 1px 0px 30px orangered;
+}
+        /* Blog post CSS Video posts */
+    .video-post h2 {
+        font-size: 1.25rem;
     }
 
-    .websiteRefreshed img {
-        width: 15rem;
-        height: 12rem;
-        border: 2px solid black;
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .video-post .music-by {
+        font-size: .75rem;
+        color: tan;
+        line-height: .8rem;
     }
 
     footer {
         text-align: center;
         padding: 10px;
         font-size: 0.9rem;
+        height: 18rem;
     }
 }
 
