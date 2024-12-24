@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, #06f, #aab, #06f);/*set textured background*/
+    background: linear-gradient(to bottom, #2d4d8e, #ddf, #2d4d8e);/*set textured background*/
 }
 
 /* Header Styles */
@@ -144,7 +144,7 @@ text-decoration: none;
 }
 
 .bartender-lupa-image {
-    background-image: url(../Resources/images/DonnyAtLupaReg.jpg);
+    background-image: url(../resources/images/DonnyAtLupaReg.jpg);
     background-size: contain;
     background-position: right;
     width: 15rem;
