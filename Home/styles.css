@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, #2d4d8e, #ddf, #2d4d8e);/*set textured background*/
+    background: linear-gradient(to bottom, #232323 24rem, #343434);
 }
 
 /* Header Styles */
@@ -15,6 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 21rem;
+    background: linear-gradient(to bottom, #121212, #232323);/*set textured background*/
 }
 
 /*   Name Styles */
@@ -30,14 +31,6 @@ body {
     color: white;
 }
 
-.page-name {
-    text-align: center;
-    color: #000;
-    font-size: 3rem;
-    font-family: Helvetica, sans-serif;
-    margin: 3rem;
-}
-
 .navbar {
     width: 60%;
     padding: 1rem 0rem;
@@ -49,6 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     list-style-type: none;
+    gap: 1rem;
 }
 
 /* Navbar Links */
@@ -64,14 +58,14 @@ text-decoration: none;
 
 /*  Animation for Nav Links   -linkColorChange */ 
 @keyframes linkColorChange {
-    0%{color: #111;}
-    50%{color: var(--link-color, #111);}
+    0%{color: var(--link-color);}
+    98%{color: var(--link-color, #111);}
     100%{color: #111;}
 }
 
 .link-animation-design a {
     animation: linkColorChange 3s infinite;
-    --link-color: #609;
+    --link-color: #39f;
 }
 
 .link-animation-blog a {
@@ -79,38 +73,30 @@ text-decoration: none;
     --link-color: #afa;
 }
 
+.link-animation-home a {
+    animation: linkColorChange 9s infinite;
+    --link-color: #fc0;
+    border: 2px solid #fc0;
+    
+}
+
 .link-animation-music a {
     animation: linkColorChange 5s infinite;
-    --link-color: #38f;
+    --link-color: #96F;
 }
 
 .link-animation-contact a {
     animation: linkColorChange 8s infinite;
-    --link-color: #c93;
-}
-
-
-/* Hero Icon background colors */
-
-#ig {
-    border-bottom: 3px solid #f90;
-}
-
-#x {
-    border-bottom: 3px solid #f90;
-}
-
-#yt {
-    border-bottom: 3px solid #f90;
-}
-
-#linkedin {
-    border-bottom: 3px solid #f90;
+    --link-color: coral;
 }
 
 /*       Main Content Section     */
-.main-content {
-    margin-top: 7rem;
+
+
+.hero-container {
+    width: 80%;
+    margin: auto;
+    padding-top: 12rem;
 }
 
 /* Hero Intro Container */
@@ -121,6 +107,13 @@ text-decoration: none;
     align-items: center;
     gap: 6rem;
     width: 100%;
+    background: linear-gradient(to bottom, #fff 1rem, #ffffffaa 6rem, #ddd 75%);
+}
+
+.satisfy-font {
+    font-family: "Satisfy", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .intro-container h1 {
@@ -128,19 +121,8 @@ text-decoration: none;
     top: 6rem;
     align-self: flex-start;
     margin-left: 10rem;
-    font-family: "Satisfy", serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 3.65rem;
     transform: rotate(-9deg);
-}
-
-.image-intro {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    gap: 3rem;
 }
 
 .bartender-lupa-image {
@@ -150,33 +132,56 @@ text-decoration: none;
     width: 15rem;
     height: 15rem;
     border-radius: 50%;
-    align-self: center;
 }
 
 .intro-container h2 {
-    align-self:flex-end;
-    font-family: "Satisfy", serif;
-    font-weight: 400;
-    font-style: normal;
+    position: relative;
+    bottom: 9rem;
+    left: 12rem;
     font-size: 2.65rem;
     transform: rotate(-9deg);
 }
 
-.story-container {
-    background-color: #ddddee11;
+.menu-item-container {
+    width: 70%;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+    margin-top: -6rem;
 }
-.intro-container p {
-    font-family: sans-serif;
-    text-align: center; 
-    font-size: 1.5rem;
-    letter-spacing: 0.08rem;
-    line-height: 1.85rem;
-    width: 55%;
-    color: #333;
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-description {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 60%;
+}
+
+.item-text {
+    font-size: 2rem;
+}
+
+.description-text {
+    font-size: 1.1rem;
 }
 
 .intro-container a {
     color: black;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
 }
 
 /* Link to contact page - Tan color  */
@@ -200,23 +205,19 @@ text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    margin-top: 4rem;
-    margin-bottom: 6rem;
+    gap: 1rem;
 }
 
 /* Hero Icons */
 .hero-icon-container img {
     display: block;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1rem;
+    height: 1rem;
     padding: 0.55rem;
-    border: 2px solid black;
-    box-shadow: -3px -3px 10px black;
 }
 
-.hero-icon-container .right img {
-    box-shadow: 3px -3px 10px black;
+.hero-icon-container a {
+    color: #eee;
 }
 
 /* Shadow effect on Icon hover */
@@ -226,229 +227,198 @@ text-decoration: none;
 }
 
 .skyline {
-    background: radial-gradient(circle at top, #f90 25%, transparent 37%)
+    background: radial-gradient(circle at top, #fda 25%, transparent 37%);
 }
 
 footer {
-    box-shadow: -30px -10px 60px orange;
+    box-shadow: -30px -10px 60px #fc9;
     height: 18rem;
 }
 /*  --- Responsive Media Queries  ---   */
 
 /*  Mobile styles (max-width: 600px) */
 @media (max-width: 600px) {
-    .header {
-        height: 20rem;
-        justify-content: center;
+    html {
+        font-size: 16px;
     }
+
+    .header {
+        height: 16rem;
+    }
+
     .name {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-top: 3rem;
     }
 
-    .page-name {
-        font-size: 1.5rem;
+    .navbar ul {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin: 3rem 0rem;
     }
 
+    /* Navbar Links */
     .navbar li a {
-        padding: 0.5rem;
-        font-size: 1.1rem;
-        margin: 0.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .link-animation-home a {
+        margin: 0px 5rem;
     }
 
-    .main-content {
-        margin-top: 1rem;
+    .hero-container {
+        width: 90%;
+        margin: auto;
+        padding-top: 12rem;
     }
 
-    .image-intro {
+    /* Hero Intro Container */
+    .intro-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-content: center;
-        gap: 1rem;
-        width: 75%;
+        align-items: center;
+        gap: 6rem;
+        width: 100%;
+        background: linear-gradient(to bottom, #fff 1rem, #ffffffaa 6rem, #ddd 75%);
     }
-    
-    .bartender-lupa-image {
-        background-image: url(../Resources/images/DonnyAtLupaReg.jpg);
-        background-size: contain;
-        background-position: center;
-        width: 12rem;
-        height: 12rem;
-        border-radius: 50%;
+
+    .satisfy-font {
+        font-family: "Satisfy", serif;
+        font-weight: 400;
+        font-style: normal;
     }
+
     .intro-container h1 {
+        position: relative;
+        top: 6rem;
+        align-self: flex-start;
         margin-left: 1rem;
-        font-size: 2rem;
+        font-size: 1.65rem;
+        transform: rotate(-9deg);
+    }
+
+    .bartender-lupa-image {
+        background-image: url(../resources/images/DonnyAtLupaReg.jpg);
+        background-size: contain;
+        background-position: right;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
     }
 
     .intro-container h2 {
-        font-size: 1.75rem;
+        position: relative;
+        bottom: 6rem;
+        left: 3rem;
+        font-size: 1.25rem;
+        transform: rotate(-9deg);
     }
 
-    .intro-container p {
+    .menu-item-container {
+        width: 100%;
+        height: 45rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 3rem;
+        margin-top: 1rem;
+        gap: 6rem;
+    }
+
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: .5rem;
+        text-align: center;
+        gap: 1.2rem
+    }
+
+    .item-description {
+        gap: .5rem;
+        width: 80%;
+    }
+
+    .item-text {
+        font-size: 1.25rem;
+    }
+
+    .price-text {
+        font-size: 0.85rem;
+    }
+
+    .description-text {
         font-size: 1rem;
-        width: 85%;
     }
 
-        /* Link to contact page - Tan color  */
+    .intro-container a {
+        color: black;
+    }
+
+    .footnotes {
+        width: 75%;
+        font-size:  0.9rem;
+    }
+
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+    }
+
+    /* Link to contact page - Tan color  */
     .contact-link {
         color: #111;
         font-weight: 700;
         background: linear-gradient(white, #f96);
-        outline: 3px solid black;
+        outline: 2px solid black;
         padding: .25rem;
-        font-size: 1rem;
-}
+        box-shadow: -3px -3px 10px black;
+    }
+
+    .contact-link:hover {
+        box-shadow: 0px 0px 100px lightblue;
+        opacity: 0.95;
+    }
+
+    /* Hero Icon Container */
 
     .hero-icon-container {
-        flex-wrap: wrap;
-        gap: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
     }
 
     /* Hero Icons */
     .hero-icon-container img {
         display: block;
-        width: 1.5rem;
-        height: 1.5rem;
-        padding: 0.25rem;
-        border: 1px solid black;
-        box-shadow: -2px -2px 6px black;
-}
+        width: 1rem;
+        height: 1rem;
+        padding: 0.55rem;
+    }
+
+    .hero-icon-container a {
+        color: #eee;
+    }
+
+    /* Shadow effect on Icon hover */
+    .hero-icon-container img:hover {
+        box-shadow: -.2rem .2rem 5rem lightblue;
+        opacity: .7;
+    }
+
+    .skyline {
+        background: radial-gradient(circle at top, #fda 25%, transparent 37%);
+    }
 
     footer {
-        text-align: center;
-        padding: 10px;
-        font-size: 0.9rem;
+        box-shadow: -30px -10px 60px #fc9;
         height: 18rem;
     }
-}
-
-/* Small laptops and tablets (below 1366px wide) */
-@media (max-width: 1366px) {
-    /* Styles for small laptops */
-}
-
-/* Medium to large laptops (1366px to 1440px wide) */
-@media (min-width: 1366px) and (max-width: 1440px) {
-    /* Styles for MacBook Air/Pro and similar devices */
-}
-
-/* Larger laptops (Full HD and higher, 1920px and up) */
-@media (min-width: 1920px) {
-    /* Styles for 1920px+ screens */
-}
-
-/* Tablet styles  (min-width: 601px and max-width: 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-    .name {
-        font-size: 6rem;
     }
-
-    .page-name {
-        font-size: 2rem;
-    }
-
-    .navbar ul {
-        flex-direction: row;
-        gap: 2rem;
-    }
-
-    .navbar li a {
-        font-size: 1.8rem;
-    }
-
-    .intro-container h1 {
-        font-size: 3rem;
-    }
-
-    .intro-container p {
-        font-size: 1.2rem;
-        width: 70%;
-    }
-
-    .hero-icon-container {
-        gap: 2rem
-    }
-
-    .hero-icon-container img{
-        width: 3rem;
-        height: 3rem;
-    }
-}
-
-/* Laptop styles  (min-width: 901px and max-width: 1200px) */
-@media (min-width: 901px) and (max-width: 1200px) {
-    .name {
-        font-size: 7rem;
-    }
-
-    .page-name {
-        font-size: 2.5rem;
-    }
-
-    .navbar ul {
-        flex-direction: row;
-        gap: 3rem;
-    }
-
-    .navbar li a {
-        font-size: 1.9rem;
-    }
-
-    .intro-container h1 {
-        font-size: 3.5rem;
-    }
-
-    .intro-container p {
-        font-size: 1.3rem;
-        width: 60%;
-    }
-
-    .hero-icon-container {
-        gap: 2.5rem
-    }
-
-    .hero-icon-container img{
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-}
-
-/* Tablet styles  min-width: 1201px */
-@media (min-width: 1201px) {
-    .name {
-        font-size: 8.25rem;
-    }
-
-    .page-name {
-        font-size: 3rem;
-    }
-
-    .navbar ul {
-        gap: 3rem;
-    }
-
-    .navbar li a {
-        font-size: 2rem;
-    }
-
-    .intro-container h1 {
-        font-size: 4rem;
-    }
-
-    .intro-container p {
-        font-size: 1.5rem;
-        width: 55%;
-    }
-
-    .hero-icon-container {
-        gap: 3rem
-    }
-
-    .hero-icon-container img{
-        width: 4rem;
-        height: 4rem;
-    }
-}
-
+        

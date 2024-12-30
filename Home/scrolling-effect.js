@@ -10,7 +10,7 @@ const windowHeight = window.innerHeight;
 
 elements.forEach((element) => {
     const rect = element.getBoundingClientRect();
-    if (rect.top < windowHeight - 50) { // Adjust the threshold as needed
+    if (rect.top < windowHeight - 1) { // Adjust the threshold as needed
         element.classList.add("visible");
     }
 });

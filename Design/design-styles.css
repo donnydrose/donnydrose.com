@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, #2d4d8e, #aab, #2d4d8e);/*set textured background*/
+    background: linear-gradient(to bottom, #232323 24rem, #343434);
 }
 
 /* Header Styles */
@@ -15,6 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 21rem;
+    background: linear-gradient(to bottom, #121212, #232323);/*set textured background*/
 }
 
 /*   Name Styles */
@@ -30,18 +31,11 @@ body {
     color: white;
 }
 
-.page-name {
-    text-align: center;
-    color: #000;
-    font-size: 3rem;
-    font-family: Helvetica, sans-serif;
-    margin: 3rem;
-}
-
 .navbar {
     width: 60%;
     padding: 1rem 0rem;
 }
+
 /*Navbar Styles*/
 .navbar ul {
     display: flex; 
@@ -49,6 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     list-style-type: none;
+    gap: .5rem;
 }
 
 /* Navbar Links */
@@ -64,15 +59,11 @@ text-decoration: none;
 
 /*  Animation for Nav Links   -linkColorChange */ 
 @keyframes linkColorChange {
-    0%{color: #111;}
-    50%{color: var(--link-color, #111);}
+    0%{color: var(--link-color);}
+    98%{color: var(--link-color, #111);}
     100%{color: #111;}
 }
 
-.link-animation-design a {
-    animation: linkColorChange 3s infinite;
-    --link-color: #609;
-}
 
 .link-animation-blog a {
     animation: linkColorChange 6s infinite;
@@ -81,13 +72,26 @@ text-decoration: none;
 
 .link-animation-music a {
     animation: linkColorChange 5s infinite;
-    --link-color: #38f;
+    --link-color: #96F;
+}
+
+.link-animation-design a {
+    animation: linkColorChange 3s infinite;
+    --link-color: #39f;
+    border: 2px solid #39f;
 }
 
 .link-animation-contact a {
     animation: linkColorChange 8s infinite;
-    --link-color: #c93;
+    --link-color: coral;
 }
+
+.navbar .link-animation-home a {
+    color: #fc0;
+    
+    
+}
+
 
 /*       Main Content Section     */
 
@@ -97,21 +101,21 @@ text-decoration: none;
     justify-content: center;
     width: 100%;
     text-align: left;
-    margin: 18rem auto;
+    margin: 8rem auto;
     line-height: 2rem;
     gap: 1rem;
 }
 
 .landing-pages-intro h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #eee;
     width: 50%;
     margin: 0 auto;
 }
 
 .landing-pages-intro h2 {
     font-size: 2rem;
-    color: #333;
+    color: #eee;
     width: 50%;
     margin: 0 auto;
 }
@@ -169,40 +173,41 @@ button a {
 }*/
 
 .skyline {
-    background: radial-gradient(circle at top, #ddd 35%, transparent 37%)
+    background: radial-gradient(circle at top, #39f 35%, transparent 37%)
 }
 
 
 footer {
-    box-shadow: -30px -10px 60px #ddd;
+    box-shadow: -30px -10px 60px #39f;
     height: 18rem;
 }
 
 /*  --- Responsive Media Queries  ---   */
+
 /*  Mobile styles (max-width: 600px) */
 @media (max-width: 600px) {
     .header {
-        height: 20rem;
+        height: 16rem;
     }
     .name {
-        font-size: 3rem;
-    }
-
-    .page-name {
-        font-size: 1.5rem;
-        margin-top: 2rem;
-    }
-
+        font-size: 2.5rem;
+        margin-top: 3rem;
+        }
     .navbar ul {
-        flex-direction: row;
         flex-wrap: wrap;
-        gap: 3.5rem;
+        gap: 1.5rem;
+        margin: 3rem 0rem;
     }
-
+    /* Navbar Links */
     .navbar li a {
-        font-size: 1.1rem
-
+        font-size: 1.2rem;
     }
+    
+    .link-animation-design a {
+        margin: 0px 5rem;
+    }
+    
+}
 
     .landing-pages-intro {
         display: flex;
@@ -217,232 +222,23 @@ footer {
     
     .landing-pages-intro h1 {
         font-size: 1.5rem;
-        color: #333;
+        color: #ddd;
         width: 100%;
         margin: 0 auto;
     }
 
     .landing-pages-intro h2 {
         font-size: 1rem;
-        color: #333;
+        color: #ddd;
         width: 100%;
         margin: 0 auto;
     }
     
-    
-    
-    /*  Individual Page Section Styles   */
-    .page-halloween24 {
-        background: linear-gradient(#111, #666);
-        color: white;
-    }
-    
-    .page-link-heading {
-        width: 100%;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        letter-spacing: .3rem;
-        font-weight: 600;
-        font-size: 2rem;
-        margin: auto;
-        padding: 1rem;
-    }
-    
-    .main-box {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 2rem;
-    }
-    
-    .page-link-photo {
-        background-image: url(./resources/images/halloween24.png);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        border: 3px solid black;
-        width: 17rem;
-        height: 20rem;
-        margin-top: 1.5rem;
-    }
-    
-    .page-link-info {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        gap: 1rem;
-        margin-top: 1.5rem;
-    }
-    
-    .page-link-description {
-        font-size: 1.75rem;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        letter-spacing: .3rem;
-        line-height: 1.75rem;
-        letter-spacing: .2rem;
-    
-    }
-    
-    .link-buttons {
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    button {
-        font-size: 1rem;
-        padding: .6rem;
-        background: linear-gradient(orange, yellow);
-    }
-    
-    button a {
-        text-decoration: none;
-        color: black;
-    }
 
     footer {
         text-align: center;
         padding: 10px;
         font-size: 0.9rem;
         height: 9rem;
-    }
-}
-
-/* Tablet styles  (min-width: 601px and max-width: 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-    .name {
-        font-size: 6rem;
-    }
-
-    .page-name {
-        font-size: 2rem;
-    }
-
-    .navbar ul {
-        flex-direction: row;
-        gap: 2rem;
-    }
-
-    .navbar li a {
-        font-size: 1.8rem;
-    }
-
-    @keyframes moveLeft {
-        0% {
-            right: -100%;
-        }
-        100% {
-            right: 100%;
-            transform: translateX(-120rem);
-        }
-    }
-
-    .landing-pages-intro h1 {
-        font-size: 2rem;
-    }
-
-    .intro-container p {
-        font-size: 1.2rem;
-        width: 70%;
-    }
-
-    .dropdown select {
-        font-size: 1.1rem;
-        width: 80%;
-    }
-
-    .hero-icon-container {
-        gap: 2rem
-    }
-
-    .hero-icon-container img{
-        width: 3rem;
-        height: 3rem;
-    }
-}
-
-/* Laptop styles  (min-width: 901px and max-width: 1200px) */
-@media (min-width: 901px) and (max-width: 1200px) {
-    .name {
-        font-size: 7rem;
-    }
-
-    .page-name {
-        font-size: 2.5rem;
-    }
-
-    .navbar ul {
-        flex-direction: row;
-        gap: 3rem;
-    }
-
-    .navbar li a {
-        font-size: 1.9rem;
-    }
-
-    .intro-container h1 {
-        font-size: 3.5rem;
-    }
-
-    .intro-container p {
-        font-size: 1.3rem;
-        width: 60%;
-    }
-
-    .dropdown select {
-        font-size: 1.2rem;
-        width: 75%;
-    }
-
-    .hero-icon-container {
-        gap: 2.5rem
-    }
-
-    .hero-icon-container img{
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-}
-
-/* Tablet styles  min-width: 1201px */
-@media (min-width: 1201px) {
-    .name {
-        font-size: 8.25rem;
-    }
-
-    .page-name {
-        font-size: 3rem;
-    }
-
-    .navbar ul {
-        gap: 3rem;
-    }
-
-    .navbar li a {
-        font-size: 2rem;
-    }
-
-    .intro-container h1 {
-        font-size: 4rem;
-    }
-
-    .intro-container p {
-        font-size: 1.5rem;
-        width: 55%;
-    }
-
-    .dropdown select {
-        font-size: 1.2rem;
-        width: 60%;
-    }
-
-    .hero-icon-container {
-        gap: 3rem
-    }
-
-    .hero-icon-container img{
-        width: 4rem;
-        height: 4rem;
     }
 }

@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, #2d4d8e, #ddf, #2d4d8e);/*set textured background*/
+    background: linear-gradient(to bottom, #232323 24rem, #343434);
 }
 
 /* Header Styles */
@@ -15,6 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 21rem;
+    background: linear-gradient(to bottom, #121212, #232323);/*set textured background*/
 }
 
 /*   Name Styles */
@@ -30,14 +31,6 @@ body {
     color: white;
 }
 
-.page-name {
-    text-align: center;
-    color: #afa;
-    font-size: 3rem;
-    font-family: Helvetica, sans-serif;
-    margin: 3rem;
-}
-
 .navbar {
     width: 60%;
     padding: 1rem 0rem;
@@ -49,6 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     list-style-type: none;
+    gap: 1rem;
 }
 
 /* Navbar Links */
@@ -64,42 +58,49 @@ text-decoration: none;
 
 /*  Animation for Nav Links   -linkColorChange */ 
 @keyframes linkColorChange {
-    0%{color: #111;}
-    50%{color: var(--link-color, #111);}
+    0%{color: var(--link-color);}
+    98%{color: var(--link-color, #111);}
     100%{color: #111;}
 }
 
 .link-animation-design a {
     animation: linkColorChange 3s infinite;
-    --link-color: #609;
-}
-
-.link-animation-home a {
-    animation: linkColorChange 6s infinite;
-    --link-color: #777;
+    --link-color: #39f;
 }
 
 .link-animation-music a {
     animation: linkColorChange 5s infinite;
-    --link-color: #38f;
+    --link-color: #96f;
+}
+
+.link-animation-blog a {
+    color: #afa;
+    border: 2px solid #afa;
 }
 
 .link-animation-contact a {
-    animation: linkColorChange 8s infinite;
-    --link-color: #c93;
+    animation: linkColorChange 6s infinite;
+    --link-color: #f90;
 }
 
+.link-animation-home a {
+    animation: linkColorChange 9s infinite;
+    --link-color: #fc0;
+}
 
 /*       Main Content Section     */
-.main-content {
-    margin-top: 7rem;
-}
-
 
 .title {
     display: flex; 
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
+}
+
+.satisfy-font {
+    font-family: "Satisfy", serif;
+    font-weight: 400;
+    font-style: normal;
+    transform: rotate(-5deg);
 }
 
 .blog-container {
@@ -111,25 +112,31 @@ text-decoration: none;
     gap: 6rem;
     margin: auto;
     padding: 1rem;
+    padding-top: 9rem;
+    background: linear-gradient(#232323 9rem, #A8D5BA, #797);
 }
 
 .blog-container h1 {
-    color: black;
+    color: #afa;
     font-size: 4rem;
     text-align: center;
+    margin-top: 6rem;
 }
 
+.blog-container .tagline {
+    color: #ded;
+
+}
 .blog-container h2 {
     width: 70%;
-    color: black;
+    color: #333;
     text-align: center;
     font-size: 1.75rem;
     margin: auto;
 }
 
-
-
 .blog-post {
+    width: 75%;
     display: flex;
     flex-direction: column;
     padding: 2rem;
@@ -229,11 +236,11 @@ text-decoration: none;
 }
 
 .skyline {
-    background: radial-gradient(circle at top, #ded 25%, transparent 37%)
+    background: radial-gradient(circle at top, #def 25%, transparent 37%)
 }
 
 footer {
-    box-shadow: -30px -10px 60px #ded;
+    box-shadow: -30px -10px 60px #afa;
     height: 18rem;
 }
 /*  --- Responsive Media Queries  ---   */
@@ -241,45 +248,53 @@ footer {
 /*  Mobile styles (max-width: 600px) */
 @media (max-width: 600px) {
     .header {
-        height: 20rem;
-        justify-content: center;
+        height: 16rem;
     }
     .name {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-top: 3rem;
+        }
+    .navbar ul {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin: 3rem 0rem;
     }
-
-    .page-name {
-        font-size: 1.5rem;
-    }
-
-    .navbar li a {
-        padding: 0.5rem;
-        font-size: 1.1rem;
-        margin: 0.5rem;
-    }
-
-    .main-content {
-        margin-top: 1rem;
-    }
-
     
+    .navbar li a {
+        font-size: 1.2rem;
+    }
+    
+    .link-animation-blog a {
+        margin: 0px 5rem;
+    }
 
     .blog-container {
-        width: 75%;
+        width: 95%;
     }
 
     .blog-container h1 {
-        color: black;
+        color: #afa;
         font-size: 2rem;
         text-align: center;
     }
     
+    .blog-container .tagline {
+        font-size: 1.25rem
+    }
+
     .blog-container h2 {
         width: 70%;
-        color: black;
+        color: #333;
         text-align: center;
         font-size: 1.25rem;
+        margin: auto;
+    }
+
+    .blog-container p {
+        width: 95%;
+        color: #333;
+        text-align: center;
+        font-size: 1rem;
         margin: auto;
     }
 
@@ -349,207 +364,5 @@ footer {
         padding: 10px;
         font-size: 0.9rem;
         height: 18rem;
-    }
-}
-
-/* Tablet styles  (min-width: 601px and max-width: 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-    .name {
-        font-size: 6rem;
-    }
-
-    .page-name {
-        font-size: 2rem;
-    }
-
-    .navbar ul {
-        flex-direction: row;
-        gap: 2rem;
-    }
-
-    .navbar li a {
-        font-size: 1.8rem;
-    }
-
-    @keyframes moveLeft {
-        0% {
-            right: -100%;
-        }
-        100% {
-            right: 100%;
-            transform: translateX(-120rem);
-        }
-    }
-
-    .main-content {
-        margin-top: 10rem;
-    }
-    .main-content h1 {
-        color: black;
-        text-align: center;
-    }
-    
-    .blog-container h1 {
-        color: black;
-        font-size: 3rem;
-        text-align: center;
-    }
-    
-    .blog-container h2 {
-        color: black;
-        text-align: center;
-    }
-    
-    /* Hero container styles */
-    .blog-container {
-        max-width: 45rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-        margin: auto;
-        padding: 1rem;
-    }
-    
-    .blog-post {
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-        margin-bottom: 1.5rem;
-        background: linear-gradient(#efe, #ded, #efe);
-        border: 0.25rem solid #111;
-    }
-    
-    
-    .blog-date {
-        font-weight: 500;
-        margin-bottom: 1rem;
-    }
-    
-    .blog-post h2 {
-        text-align: center;
-        font-family: sans-serif;
-        font-weight: 600;
-        font-size: 1.75rem;
-        width: 75%;
-        margin: 2rem auto 2rem;
-    }
-    
-    
-    .blog-post p {
-        width: 100%;
-        padding: 1rem;
-        font-family: sans-serif;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 150%;
-        color: #222;
-    }
-
-}
-
-/* Laptop styles  (min-width: 901px and max-width: 1200px) */
-@media (min-width: 901px) and (max-width: 1200px) {
-    .name {
-        font-size: 7rem;
-    }
-
-    .page-name {
-        font-size: 2.5rem;
-    }
-
-    .navbar ul {
-        flex-direction: row;
-        gap: 3rem;
-    }
-
-    .navbar li a {
-        font-size: 1.9rem;
-    }
-
-    @keyframes moveLeft {
-        0% {
-            right: -100%;
-        }
-        100% {
-            right: 100%;
-            transform: translateX(-100rem);
-        }
-    }
-
-    .intro-container h1 {
-        font-size: 3.5rem;
-    }
-
-    .intro-container p {
-        font-size: 1.3rem;
-        width: 60%;
-    }
-
-    .dropdown select {
-        font-size: 1.2rem;
-        width: 75%;
-    }
-
-    .hero-icon-container {
-        gap: 2.5rem
-    }
-
-    .hero-icon-container img{
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-}
-
-/* Tablet styles  min-width: 1201px */
-@media (min-width: 1201px) {
-    .name {
-        font-size: 8.25rem;
-    }
-
-    .page-name {
-        font-size: 3rem;
-    }
-
-    .navbar ul {
-        gap: 3rem;
-    }
-
-    .navbar li a {
-        font-size: 2rem;
-    }
-
-    @keyframes moveLeft {
-        0% {
-            right: -100%;
-        }
-        100% {
-            right: 100%;
-            transform: translateX(-100rem);
-        }
-    }
-
-    .intro-container h1 {
-        font-size: 4rem;
-    }
-
-    .intro-container p {
-        font-size: 1.5rem;
-        width: 55%;
-    }
-
-    .dropdown select {
-        font-size: 1.2rem;
-        width: 60%;
-    }
-
-    .hero-icon-container {
-        gap: 3rem
-    }
-
-    .hero-icon-container img{
-        width: 4rem;
-        height: 4rem;
     }
 }

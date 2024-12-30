@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="./Home/scrolling-effect-styles.css">
         <link rel="stylesheet" href="./Home/styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
         <meta name="description" content="Donny D Rose: Aspiring digital designer based in Brooklyn, NY. Explore my blog and connect with me.">
         <meta property="og:title" content="Donny D Rose - Digital Designer" />
         <meta property="og:description" content="Explore the portfolio of Donny D Rose, an aspiring digital designer and composer based in Brooklyn, NY." />
@@ -28,7 +28,6 @@
                     <!--Link to contact page-->
                     <div class="name"><a href="./Contact/index.html">donny d. rose</a>
                     </div>
-                    <div class="page-name">Portfolio</div>
                 </div> 
                     <!-- Navigation container-->
                 <nav class="navbar">
@@ -36,6 +35,7 @@
                       <!--Navigation links to different sections of the website-->
                       <li class="hover-design link-animation-design"><a href="./Design/index.html">Design</a></li> 
                       <li class="hover-blog link-animation-blog"><a href="./Blog/index.html" >Blog</a></li>
+                      <li class="hover-home link-animation-home"><a href="./index.html" >Home</a></li>
                       <li class="hover-music link-animation-music"><a href="./Music/index.html" >Music</a></li> 
                       <li class="hover-contact link-animation-contact"><a href="./Contact/index.html" >Contact</a></li>
                     
@@ -45,36 +45,63 @@
             <!--Main content  -->
         <main class="main-content"> 
             <!-- Pre-scroll content-->
-              <div id="scroll-text">&#8595; &#8595;
+              <div id="scroll-text">
+                <p>&#8595;  scroll</p>
+                <p>scroll  &#8595;</p> 
               </div> <!-- Javascript function to hide after scroll-->
             <!-- Hidden container-->
             <!--Hero section  -->
             <section class="hidden hero-container">
                 <article class="intro-container">
-                  <h1>Hi, Welcome In!</h1>
-                  <aside class="image-intro">
+                  <h1 class="satisfy-font">Hi, Welcome In!</h1>
+                  <aside class="image-container">
                     <div class="bartender-lupa-image"></div>
-                    <h2>I'm Donny</h2> 
                   </aside>
+                    <h2 class="satisfy-font">I'm Donny</h2> 
                   <!-- Introduction paragraph-->
-                   
-                    <p class="story-container">I am a bartender by night and an aspiring digital designer and music composer by day. Over the next six months, I’ll be updating this hand-coded website, feature by feature, while building my portfolio of professional landing pages focused on user experience and emotional impact.</p>
-                    <p class="story-container">I’m also documenting my journey of transitioning into UX and sound design on my blog, <a href="./Blog/index.html"><i>Cheers To Change.</i></a> It’s a space where I share the insights, challenges, and lessons learned as I embrace change and expand my skill set.</p> 
-                    <p class="story-container">With a passion for design and music, I’ve created this website to showcase what I’ve learned so far. Soon, I’ll be launching my web-builder portfolio, and I’d love to connect with you as I move forward along this journey.</p>
-                    <p>If you'd like to follow my journey, inquire about services, or collaborate as I build my portfolio, let's connect!</p>
-                   
-                   <p><a href="./Contact/index.html" class="contact-link" target="_blank">  Let's Connect!</a></p>
+                  <aside class="menu-item-container">
+                      <div class="menu-item">
+                        <div class="item-description">
+                          <h3 class="item-text satisfy-font">Bartender</h3>
+                          <p class="description-text">Dedicated to crafting exceptional experiences for every guest</p>
+                        </div>
+                        <span class="price-text">NYC</span>
+                      </div>
+                      <div class="menu-item">
+                        <div class="item-description">
+                          <h3 class="item-text satisfy-font">Web Designer</h3>
+                          <p class="description-text">Aspiring user experience expert, learning through self-driven, hands-on practice</p>
+                        </div>
+                      
+                        <span class="price-text">Showit.com</span>
+                      </div>
+                      <div class="menu-item">
+                        <div class="item-description">
+                          <h3 class="item-text satisfy-font">Music Composer</h3>
+                          <p class="description-text">A timeless passion that blends acoustic sound with digital synthesis to create unique sonic experiences</p>
+                        </div>
+                        <span class="price-text"> &#9829; 4 &#9835; </span>
+                      </div>
+                      <div class="menu-item">
+                        <div class="item-description">
+                          <h3 class="item-text dessert satisfy-font">Cheers To Change</h3>
+                          <p class="description-text">A blog capturing the transformation from guiding guests to caring for clients, from drinks to design, and from Cheers to Change</p>
+                        </div>
+                        <span class="price-text">Free</span>
+                      </div>
+                  </aside>
+                   <p class="footnotes">*This website was hand-coded by Donny using HTML, CSS, JS.</p>
+                    <p><a href="./Contact/index.html" class="contact-link" target="_blank">  Let's Connect!</a></p>
                   
                     <!-- Social Media icons -->
-                  <div class="hero-icon-container">
-                      <a href="https://www.instagram.com/drosedonny/" target="_blank" class="left" id="ig"><img src="./resources/images/IG-icon.png" alt="Icon linked to Donny's Instagram page"></a>
-                      <a href="https://twitter.com/donnydrose"  target="_blank" class="left" id="x"><img src="./resources/images/Twitter-icon.png" alt="Icon linked to Donny's Twitter account"></a>
-                      <a href="https://www.youtube.com/@DonnyDRose" target="_blank" class="right" id="yt"><img src="./resources/images/Youtube-icon.png" alt="Icon linked to Donny's Youtube channel"></a>
-                      <a href="https://www.linkedin.com/in/donny-rosentrater-74443a6a" target="_blank" class="right" id="linkedin"><img src="./resources/images/Linkedin-icon.png" alt="Icon linked to Donny's Linkedin account"></a>
-                  </div>
+                    <div class="hero-icon-container">
+                        <a href="https://www.instagram.com/drosedonny/" target="_blank" class="left" id="ig"><img src="./resources/images/IG-icon.png" alt="Icon linked to Donny's Instagram page"></a>
+                        <a href="https://twitter.com/donnydrose"  target="_blank" class="left" id="x"><img src="./resources/images/Twitter-icon.png" alt="Icon linked to Donny's Twitter account"></a>
+                        <a href="https://www.youtube.com/@DonnyDRose" target="_blank" class="right" id="yt"><img src="./resources/images/Youtube-icon.png" alt="Icon linked to Donny's Youtube channel"></a>
+                        <a href="https://www.linkedin.com/in/donny-rosentrater-74443a6a" target="_blank" class="right" id="linkedin"><img src="./resources/images/Linkedin-icon.png" alt="Icon linked to Donny's Linkedin account"></a>
+                    </div>
                 </article>
             </section>
-            
           <!--Container for a CSS artwork of a city skyline-->
           <section class="skyline-container"> 
             <div class="skyline">
@@ -96,6 +123,15 @@
         <!-- Footer section -->
         <footer>
           <p>© 2024 Donny D Rose. All rights reserved.</p>
+          <br>
+          <br>
+          <!-- Social Media icons -->
+          <div class="hero-icon-container">
+            <a href="https://www.instagram.com/drosedonny/" target="_blank">Instagram </a>
+            <a href="https://twitter.com/donnydrose"  target="_blank">X</a>
+            <a href="https://www.youtube.com/@DonnyDRose" target="_blank">Youtube</a>
+            <a href="https://www.linkedin.com/in/donny-rosentrater-74443a6a" target="_blank">LinkedIn</a>
+        </div>
         </footer>
         <!--Link to Javascript function-->
         <script src="./Home/scrolling-effect.js"></script>

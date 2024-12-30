@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, #2d4d8e, coral, #2d4d8e);/*set textured background*/
+    background: linear-gradient(to bottom, #232323 24rem, #343434);
 }
 
 /* Header Styles */
@@ -14,6 +14,8 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 21rem;
+
+    background: linear-gradient(to bottom, #121212, #232323);/*set textured background*/
 }
 
 /*   Name Styles */
@@ -29,14 +31,6 @@ body {
     color: white;
 }
 
-.page-name {
-    text-align: center;
-    color: coral;
-    font-size: 3rem;
-    font-family: Helvetica, sans-serif;
-    margin: 3rem;
-}
-
 .navbar {
     width: 60%;
     padding: 1rem 0rem;
@@ -48,6 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     list-style-type: none;
+    gap: .5rem;
 }
 
 /* Navbar Links */
@@ -63,14 +58,14 @@ text-decoration: none;
 
 /*  Animation for Nav Links   -linkColorChange */ 
 @keyframes linkColorChange {
-    0%{color: #111;}
-    50%{color: var(--link-color, #111);}
+    0%{color: var(--link-color);}
+    98%{color: var(--link-color, #111);}
     100%{color: #111;}
 }
 
 .link-animation-design a {
     animation: linkColorChange 3s infinite;
-    --link-color: #609;
+    --link-color: #39f;
 }
 
 .link-animation-blog a {
@@ -78,41 +73,28 @@ text-decoration: none;
     --link-color: #afa;
 }
 
+.link-animation-contact a {
+   color: coral;
+   border: 2px solid #ff7f50;
+
+}
+
 .link-animation-music a {
     animation: linkColorChange 5s infinite;
-    --link-color: #38f;
+    --link-color: #96f;
 }
 
 .link-animation-home a {
-    animation: linkColorChange 8s infinite;
-    --link-color: #777;
+     animation: linkColorChange 8s infinite;
+    --link-color: #ffcc00;
 }
 
-/* Hero Icon background colors */
-
-#ig {
-    border-bottom: 3px solid coral;
-}
-
-#x {
-    border-bottom: 3px solid coral;
-}
-
-#yt {
-    border-bottom: 3px solid coral;
-}
-
-#linkedin {
-    border-bottom: 3px solid coral;
-}
 
 /*       Main Content Section     */
-.main-content {
-    margin-top: 10rem;
-}
-.main-content h1 {
-    color: black;
-    text-align: center;
+.contact-form {
+    background: linear-gradient(135deg, #FF6F61, #F2B8A0, #F7E1D7);
+    border-radius: 5%;
+    
 }
 /* Hero Section */
 .connect-container {
@@ -122,7 +104,10 @@ text-decoration: none;
     align-items: center;
     gap: 18rem;
     text-align: center;
-    width: 100%;
+    width: 80%;
+    margin: auto;
+    padding-top: 9rem;
+    border-radius: 5%;
 }
 
 /* Hero Image container*/
@@ -172,6 +157,8 @@ img {
     padding: .55rem;
     border: 2px solid black;
     box-shadow: -3px -3px 10px black;
+
+    background: linear-gradient(135deg, #FF6F61, #F2B8A0, #F7E1D7);
 }
 
 .hero-icon-container .right img {
@@ -185,289 +172,137 @@ img {
 }
 
 .skyline {
-    background: radial-gradient(circle at top, coral 25%, transparent 37%)
+    background: radial-gradient(circle at top, coral 25%, transparent 37%);
 }
 
 footer {
-    box-shadow: -30px -10px 60px orange;
+    box-shadow: -30px -10px 160px coral;
 }
 /*  --- Responsive Media Queries  ---   */
 
 /*  Mobile styles (max-width: 600px) */
 @media (max-width: 600px) {
-    .name {
-        font-size: 3rem;
+    html {
+        font-size: 16px;
     }
 
-    .page-name {
-        font-size: 1.5rem;
+    .header {
+        height: 16rem;
+    }
+
+    .name {
+        font-size: 2.5rem;
+        margin-top: 3rem;
     }
 
     .navbar ul {
-        flex-direction: column;
-        gap: 1.25rem;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin: 3rem 0rem;
     }
 
+    /* Navbar Links */
     .navbar li a {
-        font-size: 1.5rem
-
+        font-size: 1.2rem;
     }
-
-    /*  Animation for scroll warning */
-    .scrolling-banner-container {
-        position: absolute;
-        top: 2rem;
-        animation: moveLeft 10s linear infinite;
-        color: black;
-        font-size: 1rem;
-    }
-
-    /* Airplane image from https://clipart-library.com/clip-art/airplane-clipart-transparent-18.htm */
-    #banner img {
-        width: 2.5rem;
-        height: 2.1rem;
-    }
-
-    /*       Main Content Section     */
-.main-content {
-    margin-top: 10rem;
-}
-.main-content h1 {
-    color: black;
-    text-align: center;
-}
-/* Hero Section */
-.connect-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 18rem;
-    text-align: center;
-    width: 100%;
-}
-
-/* Hero Image container*/
-.hero-image-container {
-    width: 60%;
-    overflow: hidden;
-    border-radius: 25px;
-    border: 10px solid black;
-}
-
-/* Image Styles */
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
     
-}
-
-.contact-form {
-    text-align: center;
-}
-
-.contact-form iframe{
-    width: 20rem;
-    height: 53rem;
-    background-color: transparent;
-    text-align: center;
-    border: 0 solid transparent;
-}
-
-
-
-/* Hero Icon Container */
-.hero-icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 12rem;
-}
-
-/* Hero Icons */
-.hero-icon-container img {
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    padding: .55rem;
-    border: 2px solid black;
-    box-shadow: -3px -3px 10px black;
-}
-
-.hero-icon-container .right img {
-    box-shadow: 3px -3px 10px black;
-}
-
-
-/* Shadow effect on Icon hover */
-.hero-icon-container img:hover {
-    box-shadow: -.2rem .2rem 5rem lightblue;
-}
-
+    .link-animation-contact a {
+        margin: 0px 5rem;
+    }
 
     footer {
         text-align: center;
         padding: 10px;
         font-size: 0.9rem;
     }
-}
 
-/* Tablet styles  (min-width: 601px and max-width: 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
-    .name {
-        font-size: 6rem;
+
+    /*       Main Content Section     */
+    .contact-form {
+        background: linear-gradient(135deg, #FF6F61, #F2B8A0, #F7E1D7);
+        border-radius: 0%;
+        
+    }
+    /* Hero Section */
+    .connect-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 18rem;
+        text-align: center;
+        width: 90%;
+        margin: auto;
+        padding-top: 9rem;
     }
 
-    .page-name {
-        font-size: 2rem;
+    /* Hero Image container*/
+    .hero-image-container {
+        width: 60%;
+        overflow: hidden;
+        border-radius: 25px;
+        border: 10px solid black;
     }
 
-    .navbar ul {
-        flex-direction: row;
+    /* Image Styles */
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        
+    }
+
+    .contact-form {
+        text-align: center;
+    }
+
+    .contact-form iframe{
+        width: 18rem;
+        height: 53rem;
+        background-color: transparent;
+        text-align: center;
+        border: 0 solid transparent;
+    }
+
+
+
+    /* Hero Icon Container */
+    .hero-icon-container {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 2rem;
+        margin-bottom: 12rem;
     }
 
-    .navbar li a {
-        font-size: 1.8rem;
+    /* Hero Icons */
+    .hero-icon-container img {
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        padding: .55rem;
+        border: 2px solid black;
+        box-shadow: -3px -3px 10px black;
+
+        background: linear-gradient(135deg, #FF6F61, #F2B8A0, #F7E1D7);
     }
 
-    @keyframes moveLeft {
-        0% {
-            right: -100%;
-        }
-        100% {
-            right: 100%;
-            transform: translateX(-120rem);
-        }
+    .hero-icon-container .right img {
+        box-shadow: 3px -3px 10px black;
     }
 
-    .intro-container h1 {
-        font-size: 3rem;
+
+    /* Shadow effect on Icon hover */
+    .hero-icon-container img:hover {
+        box-shadow: -.2rem .2rem 5rem lightblue;
     }
 
-    .intro-container p {
-        font-size: 1.2rem;
-        width: 70%;
+    .skyline {
+        background: radial-gradient(circle at top, coral 25%, transparent 37%);
     }
 
-    .dropdown select {
-        font-size: 1.1rem;
-        width: 80%;
-    }
-
-    .hero-icon-container {
-        gap: 2rem
-    }
-
-    .hero-icon-container img{
-        width: 3rem;
-        height: 3rem;
-    }
-}
-
-/* Laptop styles  (min-width: 901px and max-width: 1200px) */
-@media (min-width: 901px) and (max-width: 1200px) {
-    .name {
-        font-size: 7rem;
-    }
-
-    .page-name {
-        font-size: 2.5rem;
-    }
-
-    .navbar ul {
-        flex-direction: row;
-        gap: 3rem;
-    }
-
-    .navbar li a {
-        font-size: 1.9rem;
-    }
-
-    @keyframes moveLeft {
-        0% {
-            right: -100%;
-        }
-        100% {
-            right: 100%;
-            transform: translateX(-100rem);
-        }
-    }
-
-    .intro-container h1 {
-        font-size: 3.5rem;
-    }
-
-    .intro-container p {
-        font-size: 1.3rem;
-        width: 60%;
-    }
-
-    .dropdown select {
-        font-size: 1.2rem;
-        width: 75%;
-    }
-
-    .hero-icon-container {
-        gap: 2.5rem
-    }
-
-    .hero-icon-container img{
-        width: 3.5rem;
-        height: 3.5rem;
-    }
-}
-
-/* Tablet styles  min-width: 1201px */
-@media (min-width: 1201px) {
-    .name {
-        font-size: 8.25rem;
-    }
-
-    .page-name {
-        font-size: 3rem;
-    }
-
-    .navbar ul {
-        gap: 3rem;
-    }
-
-    .navbar li a {
-        font-size: 2rem;
-    }
-
-    @keyframes moveLeft {
-        0% {
-            right: -100%;
-        }
-        100% {
-            right: 100%;
-            transform: translateX(-100rem);
-        }
-    }
-
-    .intro-container h1 {
-        font-size: 4rem;
-    }
-
-    .intro-container p {
-        font-size: 1.5rem;
-        width: 55%;
-    }
-
-    .dropdown select {
-        font-size: 1.2rem;
-        width: 60%;
-    }
-
-    .hero-icon-container {
-        gap: 3rem
-    }
-
-    .hero-icon-container img{
-        width: 4rem;
-        height: 4rem;
+    footer {
+        box-shadow: -30px -10px 160px coral;
     }
 }
