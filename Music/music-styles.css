@@ -42,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    gap: .5rem;
+    gap: 1rem;
 }
 
 /* Navbar Links */
@@ -66,11 +66,13 @@ text-decoration: none;
 .link-animation-design a {
     animation: linkColorChange 3s infinite;
     --link-color: #39f;
+    border-bottom: 1px solid var(--link-color);
 }
 
 .link-animation-blog a {
     animation: linkColorChange 6s infinite;
     --link-color: #afa;
+    border-bottom: 1px solid var(--link-color);
 }
 
 .link-animation-music a {
@@ -82,11 +84,13 @@ text-decoration: none;
 .link-animation-contact a {
     animation: linkColorChange 8s infinite;
     --link-color: coral;
+    border-bottom: 1px solid var(--link-color);
 }
 
 .link-animation-home a {
     animation: linkColorChange 7s infinite;
     --link-color: #fc0;
+    border-bottom: 1px solid var(--link-color);
     
 }
 
@@ -114,14 +118,15 @@ text-decoration: none;
 
 .singles-container .script {
     position: relative;
-    bottom: 6rem;
-    right: 8rem;
+    top: 24rem;
+    left: 8rem;
+    width: fit-content;
     font-family: "Satisfy", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2.25rem;
-  transform: rotate(-9deg);
-  color: #96f;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.25rem;
+    transform: rotate(-9deg);
+    color: #96f;
 }
 
 .singles-container h1 {
@@ -163,21 +168,27 @@ text-decoration: none;
     background: linear-gradient(#d9dbf5, #dcdef5) ;
 }
 
+.journal-intro {
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid black;
+}
+
 .song-journal-container h2 {
     font-size: 2rem;
-    border-bottom: 2px solid black;
     padding: 1rem;
 }
 
+.journal-intro p {
+    font-size: 1.75rem;
+}
+
 .song-journal-container .script {
-    position: relative;
-    bottom: 4.5rem;
-    left: 13.5rem;
     font-family: "Satisfy", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.65rem;
-  transform: rotate(-9deg);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.65rem;
+    transform: rotate(-3deg);
 }
 
 .song-post {
@@ -206,31 +217,51 @@ footer {
     height: 18rem;
 }
 
+
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-social-links a {
+    color: #96f;
+    padding-top: 3rem;
+}
+
  /*  --- Responsive Media Queries  ---   */
+ @media (max-width: 374px) {
+    .navbar ul {
+        flex-wrap: wrap;
+    }
+
+    .navbar li {
+
+       margin: .8rem;
+    }
+
+}
 /*  Mobile styles (max-width: 600px) */
 @media (max-width: 600px) {
     .header {
         height: 16rem;
     }
+
     .name {
         font-size: 2.5rem;
         margin-top: 3rem;
-        }
+    }
+
     .navbar ul {
-        flex-wrap: wrap;
-        gap: 1.5rem;
+        column-gap: .5rem;
         margin: 3rem 0rem;
     }
+
     /* Navbar Links */
     .navbar li a {
         font-size: 1.2rem;
     }
     
-    .link-animation-music a {
-        --link-color: #96f;
-        margin: 0px 5rem;
-    }  
-
     .music-container {
         display: flex;
         flex-direction: row;
@@ -253,8 +284,8 @@ footer {
     
     .singles-container .script {
         position: relative;
-        bottom: -16rem;
-        right: -0.1rem;
+        top: 16rem;
+        left: 0rem;
         font-family: "Satisfy", serif;
       font-weight: 400;
       font-style: normal;
@@ -301,23 +332,26 @@ footer {
         box-shadow: 0px -0px 60px #333;
         background: linear-gradient(#d9dbf5, #dcdef5) ;
     }
-    
-    .song-journal-container h2 {
-        font-size: 2rem;
+
+    .journal-intro {
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
         border-bottom: 2px solid black;
-        padding: 1rem;
     }
     
     .song-journal-container .script {
-        position: relative;
-        bottom: 4.5rem;
-        left: 13.5rem;
         font-family: "Satisfy", serif;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 1.65rem;
-      transform: rotate(-9deg);
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.2rem;
+        transform: rotate(-3deg);
+        padding: 1rem;
     }
+    
+    .journal-intro p {
+        font-size: 1.25rem;
+    }
+    
     
     .song-post {
         border-bottom: 1px solid black;
@@ -346,29 +380,70 @@ footer {
     }
 }
 
-/*  Mobile styles (max-width: 1023px) */
-@media (min-width: 601px) and (max-width: 1223px) {
+@media (min-width: 601px) and (max-width: 900px){
     .header {
         height: 16rem;
     }
+
     .name {
-        font-size: 2.5rem;
+        font-size: 3rem;
         margin-top: 3rem;
-        }
+    }
+
     .navbar ul {
-        flex-wrap: wrap;
-        gap: 1.5rem;
+        column-gap:  0.5rem;
         margin: 3rem 0rem;
     }
-    /* Navbar Links */
+
     .navbar li a {
         font-size: 1.2rem;
     }
+    .music-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; 
+    }
     
-    .link-animation-music a {
-        --link-color: #96f;
-    }  
-
+    .singles-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(  powderblue 49%, #9966ffaa,  beige 51%);
+        padding: 5%;
+        box-shadow: 2px -2px 10px #333;
+        margin-top: 9rem;
+    }
+    
+    .singles-container .script {
+        position: relative;
+        top: 16rem;
+        left: 0rem;
+        font-family: "Satisfy", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.75rem;
+      transform: rotate(-9deg);
+      color: #96f;
+    }
+    
+    .singles-container h1 {
+        color: black;
+        text-align: center;
+        font-size: 1.75rem;
+        margin-bottom: .8rem;
+    }
+    
+    .singles-container h3 {
+        color: black;
+        text-align: center;
+        font-size: 1.25rem;
+        margin-bottom: .2rem;
+    }
+    
     .singles-image-container {
         width: 100%;
         height: 12rem;
@@ -379,30 +454,218 @@ footer {
         border-radius:  15%;
         margin-bottom: 6rem;
     }
-
+    
+    
     .song-journal-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: fit-content;
         gap: 2rem;
-        width: 90%;
+        width: 80%;
         margin: 12rem auto;
         text-align: center;
         box-shadow: 0px -0px 60px #333;
         background: linear-gradient(#d9dbf5, #dcdef5) ;
     }
 
+    .journal-intro {
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+        border-bottom: 2px solid black;
+    }
+    
+    .song-journal-container h2 {
+        font-size: 1.75rem;
+        padding: 1rem;
+    }
+    
+    .journal-intro p {
+        font-size: 1.5rem;
+    }
+    
+    .song-journal-container .script {
+        font-family: "Satisfy", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.65rem;
+        transform: rotate(-3deg);
+    }
+
+    .song-post {
+        border-bottom: 1px solid black;
+    }
+    
+    .song-post p {
+        width: 50%;
+        margin: auto;
+        padding: 2rem;
+    }
+    
+    audio {
+        width: 40%;
+        height: 1.75rem;
+        margin: 1rem;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1439px){
+
+    .header {
+        height: 16rem;
+    }
+
+    .name {
+        font-size: 3.5rem;
+        margin-top: 3rem;
+    }
+
+    .navbar ul {
+       
+        column-gap: .5rem;
+        margin: 3rem 0rem;
+    }
+
+    /* Navbar Links */
+    .navbar li a {
+        font-size: 1.5rem;
+    }
+
+    .music-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; 
+    }
+    
+    .singles-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(  powderblue 49%, #9966ffaa,  beige 51%);
+        padding: 5%;
+        box-shadow: 2px -2px 10px #333;
+        margin-top: 9rem;
+    }
+    
     .singles-container .script {
         position: relative;
-        bottom: -16rem;
-        right: -0.1rem;
+        top: 16rem;
+        left: 0rem;
         font-family: "Satisfy", serif;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 1.75rem;
-      transform: rotate(-9deg);
-      color: #96f;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.75rem;
+        transform: rotate(-9deg);
+        color: #96f;
+    }
+    
+    .singles-container h1 {
+        color: black;
+        text-align: center;
+        font-size: 1.75rem;
+        margin-bottom: .8rem;
+    }
+    
+    .singles-container h3 {
+        color: black;
+        text-align: center;
+        font-size: 1.25rem;
+        margin-bottom: .2rem;
+    }
+    
+    .singles-image-container {
+        width: 100%;
+        height: 12rem;
+        background-image: url(./resources/images/Sparrow-PlayingGuitar.png);
+        background-size: cover;
+        filter: hue-rotate(25deg) saturate(0.3);
+        opacity: 1; 
+        border-radius:  15%;
+        margin-bottom: 6rem;
+    }
+    
+    
+    .song-journal-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: fit-content;
+        gap: 2rem;
+        width: 70%;
+        margin: 12rem auto;
+        text-align: center;
+        box-shadow: 0px -0px 60px #333;
+        background: linear-gradient(#d9dbf5, #dcdef5) ;
+    }
+    .journal-intro {
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+        border-bottom: 2px solid black;
+    }
+    
+    .song-journal-container h2 {
+        font-size: 1.75rem;
+        padding: 1rem;
+    }
+    
+    .journal-intro p {
+        font-size: 1.5rem;
+    }
+    
+    .song-journal-container .script {
+        font-family: "Satisfy", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.65rem;
+        transform: rotate(-3deg);
+    }
+    .song-post {
+        border-bottom: 1px solid black;
+    }
+    
+    .song-post p {
+        width: 50%;
+        margin: auto;
+        padding: 2rem;
+    }
+    
+    audio {
+        width: 40%;
+        height: 1.75rem;
+        margin: 1rem;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .header {
+        height: 16rem;
+    }
+
+    .name {
+        font-size: 5.5rem;
+        margin-top: 3rem;
+    }
+
+    .navbar ul {
+       
+        column-gap: 1.5rem;
+        margin: 3rem 0rem;
+    }
+
+    /* Navbar Links */
+    .navbar li a {
+        font-size: 1.75rem;
+    }
+
+    .top-contact {
+        bottom: 34rem;
+        left: 16rem;
     }
 
 }
+    

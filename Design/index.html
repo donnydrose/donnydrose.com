@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="../Home/footer-skyline-styles.css"> 
         <link rel="stylesheet" href="../Home/scrolling-effect-styles.css">  
         <link rel="stylesheet" href="../Design/design-styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     </head>
     <body>
        <!-- Header section containing name and navigation -->
@@ -21,26 +24,30 @@
                 <!-- Navigation container-->
             <nav class="navbar">
                 <ul>
-                    <!--Navigation links to different sections of the website-->
-                    <li class="hover-blog link-animation-blog"><a href="../Blog/index.html" rel="noopener noreferrer">Blog</a></li>
-                    <li class="hover-music link-animation-music"><a href="../Music/index.html" >Music</a></li> 
-                    <li class="hover-design link-animation-design"><a href="../Design/index.html" >Design</a></li> 
-                    <li class="hover-contact link-animation-contact"><a href="../Contact/index.html" >Contact</a></li>
+                    <!--Navigation links to different sections of the website--> 
                     <li class="hover-home link-animation-home"><a href="../index.html">Home</a></li>
+                    <li class="hover-blog link-animation-blog"><a href="../Blog/index.html" rel="noopener noreferrer">Blog</a></li>
+                    <li class="hover-design link-animation-design"><a href="../Design/index.html" >Design</a></li>
+                    <li class="hover-music link-animation-music"><a href="../Music/index.html" >Music</a></li> 
+                    <li class="hover-contact link-animation-contact"><a href="../Contact/index.html" >Contact</a></li>
+                   
                 </ul>
             </nav>
         </header>
             <!--Main content  -->
         <main class="main-content">
-            <!-- Pre-scroll content-->
-            <div id="scroll-text">
-              </div>
+             <!-- Pre-scroll content-->
+             <div id="scroll-text">
+                <p>&#8595;  scroll</p>
+                <p>&#8593; links &#8593;</p>
+                <p>scroll  &#8595;</p> 
+              </div> <!-- Javascript function to hide after scroll-->
             <!-- Hidden container-->
                 <!-- Showcase section  -->
-                <section class=" showcase-container">
+                <section class="hidden showcase-container">
                     <!-- Landing pages section  -->
                     <article class="landing-pages-intro">
-                        <h1>Coming Soon:</h1>
+                        <h1 class="satisfy-font">Coming Soon:</h1>
                         <h2>Professional landing pages, client projects, UX case studies, and other passion-driven projects. Stay tuned!</h2>
                     </article><!--
                     <section class="landing-pages-container">
@@ -81,8 +88,16 @@
             <!-- Footer section -->
         <footer>
             <p>© 2024 Donny D Rose. All rights reserved.</p>
+             <!-- Social Media icons -->
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/drosedonny/" target="_blank">Instagram </a>
+            <a href="https://twitter.com/donnydrose"  target="_blank">X</a>
+            <a href="https://www.youtube.com/@DonnyDRose" target="_blank">Youtube</a>
+            <a href="https://www.linkedin.com/in/donny-rosentrater-74443a6a" target="_blank">LinkedIn</a>
+        </div>
           </footer>
           <!--Link to Javascript function-->
+          <script src="../Home/scrolling-effect.js"></script>
     </body>
 </html>
 

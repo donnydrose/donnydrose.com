@@ -2,10 +2,13 @@
 /* Base Font Size */
 html {
     font-size: 18px;/* Setting the document rem size*/
+    box-sizing: border-box;
 }
 
 body {
     background: linear-gradient(to bottom, #232323 24rem, #343434);
+    box-sizing: border-box;
+
 }
 
 /* Header Styles */
@@ -66,11 +69,13 @@ text-decoration: none;
 .link-animation-design a {
     animation: linkColorChange 3s infinite;
     --link-color: #39f;
+    border-bottom: 1px solid var(--link-color);
 }
 
 .link-animation-blog a {
     animation: linkColorChange 6s infinite;
     --link-color: #afa;
+    border-bottom: 1px solid var(--link-color);
 }
 
 .link-animation-home a {
@@ -83,18 +88,20 @@ text-decoration: none;
 .link-animation-music a {
     animation: linkColorChange 5s infinite;
     --link-color: #96F;
+    border-bottom: 1px solid var(--link-color);
 }
 
 .link-animation-contact a {
     animation: linkColorChange 8s infinite;
     --link-color: coral;
+    border-bottom: 1px solid var(--link-color);
 }
 
 /*       Main Content Section     */
 
 
 .hero-container {
-    width: 80%;
+    width: 60%;
     margin: auto;
     padding-top: 12rem;
 }
@@ -108,6 +115,7 @@ text-decoration: none;
     gap: 6rem;
     width: 100%;
     background: linear-gradient(to bottom, #fff 1rem, #ffffffaa 6rem, #ddd 75%);
+   
 }
 
 .satisfy-font {
@@ -142,14 +150,21 @@ text-decoration: none;
     transform: rotate(-9deg);
 }
 
+.top-contact {
+    position: relative;
+    bottom: 38rem;
+    left: 24rem;
+
+}
+
 .menu-item-container {
-    width: 70%;
+    max-width: 70%;
     height: 35rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 3rem;
-    margin-top: -6rem;
+    margin-top: -12rem;
 }
 
 .menu-item {
@@ -175,6 +190,17 @@ text-decoration: none;
 .intro-container a {
     color: black;
 }
+
+.deal {
+    color: Black;
+    font-size: 1rem;
+}
+.strikethru {
+    text-decoration: line-through;
+    color: red;
+}
+
+
 
 .contact-links {
     display: flex;
@@ -216,10 +242,6 @@ text-decoration: none;
     padding: 0.55rem;
 }
 
-.hero-icon-container a {
-    color: #eee;
-}
-
 /* Shadow effect on Icon hover */
 .hero-icon-container img:hover {
     box-shadow: -.2rem .2rem 5rem lightblue;
@@ -234,14 +256,29 @@ footer {
     box-shadow: -30px -10px 60px #fc9;
     height: 18rem;
 }
-/*  --- Responsive Media Queries  ---   */
 
-/*  Mobile styles (max-width: 600px) */
-@media (max-width: 600px) {
-    html {
-        font-size: 16px;
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-social-links a {
+    color: #fc9;
+}
+
+@media (max-width: 374px) {
+    .navbar ul {
+        flex-wrap: wrap;
+    }
+    .top-contact {
+        bottom: 30rem;
+        left: 1rem;
     }
 
+}
+/*  Mobile styles (max-width: 600px) */
+@media (max-width: 600px) {
     .header {
         height: 16rem;
     }
@@ -252,8 +289,8 @@ footer {
     }
 
     .navbar ul {
-        flex-wrap: wrap;
-        gap: 1.5rem;
+       
+        column-gap: .5rem;
         margin: 3rem 0rem;
     }
 
@@ -262,14 +299,11 @@ footer {
         font-size: 1.2rem;
     }
     
-    .link-animation-home a {
-        margin: 0px 5rem;
-    }
 
     .hero-container {
-        width: 90%;
+        width: 95%;
         margin: auto;
-        padding-top: 12rem;
+        padding-top: 9rem;
     }
 
     /* Hero Intro Container */
@@ -315,14 +349,21 @@ footer {
         transform: rotate(-9deg);
     }
 
+    .top-contact {
+        bottom: 30rem;
+        left: 1rem;
+        width: fit-content;
+        font-size: .9rem;
+    }
+
     .menu-item-container {
         width: 100%;
-        height: 45rem;
+        height: 55rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        padding: 3rem;
-        margin-top: 1rem;
+        padding: 2rem;
+        margin-top: -8rem auto;
         gap: 6rem;
     }
 
@@ -331,6 +372,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 95%;
         padding: .5rem;
         text-align: center;
         gap: 1.2rem
@@ -338,11 +380,12 @@ footer {
 
     .item-description {
         gap: .5rem;
-        width: 80%;
+        width: 100%;
     }
 
     .item-text {
-        font-size: 1.25rem;
+        font-size: 1.75rem;
+        font-weight: 200;
     }
 
     .price-text {
@@ -357,9 +400,404 @@ footer {
         color: black;
     }
 
+    .footnote-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        
+    }
+
     .footnotes {
-        width: 75%;
-        font-size:  0.9rem;
+        width: 80%;
+        font-size:  0.8rem;
+    }
+
+    .contact-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+    }
+
+    /* Link to contact page - Tan color  */
+    .contact-link {
+        color: #111;
+        font-weight: 600;
+        background: linear-gradient(white, #f96);
+        outline: 2px solid black;
+        padding: .15rem;
+        box-shadow: -3px -3px 10px black;
+        font-size: .8rem;
+    }
+
+    .contact-link:hover {
+        box-shadow: 0px 0px 100px lightblue;
+        opacity: 0.95;
+    }
+
+    /* Hero Icon Container */
+
+    .hero-icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* Hero Icons */
+    .hero-icon-container img {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        padding: 0.55rem;
+    }
+
+    /* Shadow effect on Icon hover */
+    .hero-icon-container img:hover {
+        box-shadow: -.2rem .2rem 5rem lightblue;
+        opacity: .7;
+    }
+
+    .skyline {
+        background: radial-gradient(circle at top, #fda 25%, transparent 37%);
+    }
+
+    footer {
+        box-shadow: -30px -10px 60px #fc9;
+        height: 18rem;
+    }
+    }
+        
+    @media (min-width: 601px) and (max-width: 900px){
+
+        .header {
+            height: 16rem;
+        }
+    
+        .name {
+            font-size: 3rem;
+            margin-top: 3rem;
+        }
+    
+        .navbar ul {
+           
+            column-gap: .5rem;
+            margin: 3rem 0rem;
+        }
+    
+        /* Navbar Links */
+        .navbar li a {
+            font-size: 1.2rem;
+        }
+        
+    
+        .hero-container {
+            width: 100%;
+            margin: auto;
+            padding-top: 9rem;
+        }
+    
+        /* Hero Intro Container */
+        .intro-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6rem;
+            width: 90%;
+            margin: auto;
+            background: linear-gradient(to bottom, #fff 1rem, #ffffffaa 6rem, #ddd 75%);
+        }
+    
+        .satisfy-font {
+            font-family: "Satisfy", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    
+        .intro-container h1 {
+            position: relative;
+            top: 6rem;
+            align-self: flex-start;
+            margin-left: 8rem;
+            font-size: 2rem;
+            transform: rotate(-9deg);
+        }
+    
+        .bartender-lupa-image {
+            background-image: url(../resources/images/DonnyAtLupaReg.jpg);
+            background-size: contain;
+            background-position: right;
+            width: 12rem;
+            height: 12rem;
+            border-radius: 50%;
+        }
+    
+        .intro-container h2 {
+            position: relative;
+            bottom: 6rem;
+            left: 3rem;
+            font-size: 1.5rem;
+            transform: rotate(-9deg);
+        }
+    
+        .menu-item-container {
+            width: 100%;
+            height: 55rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 2rem;
+            margin-top: -8rem auto;
+            gap: 6rem;
+        }
+    
+        .top-contact {
+            bottom: 27rem;
+            left: 10rem;
+            font-size: 1rem;
+        }
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 95%;
+            padding: .5rem;
+            text-align: center;
+            gap: 1.2rem
+        }
+    
+        .item-description {
+            gap: .5rem;
+            width: 100%;
+        }
+    
+        .item-text {
+            font-size: 1.75rem;
+            font-weight: 200;
+        }
+    
+        .price-text {
+            font-size: 0.85rem;
+        }
+    
+        .description-text {
+            font-size: 1rem;
+        }
+    
+        .intro-container a {
+            color: black;
+        }
+    
+        .footnote-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 1rem;
+            
+        }
+    
+        .footnotes {
+            width: 80%;
+            font-size:  0.8rem;
+        }
+    
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            margin: auto;
+        }
+    
+        /* Link to contact page - Tan color  */
+        .contact-link {
+            color: #111;
+            font-weight: 700;
+            background: linear-gradient(white, #f96);
+            outline: 2px solid black;
+            padding: .25rem;
+            box-shadow: -3px -3px 10px black;
+        }
+    
+        .contact-link:hover {
+            box-shadow: 0px 0px 100px lightblue;
+            opacity: 0.95;
+        }
+    
+        /* Hero Icon Container */
+    
+        .hero-icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+    
+        /* Hero Icons */
+        .hero-icon-container img {
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            padding: 0.55rem;
+        }
+    
+        /* Shadow effect on Icon hover */
+        .hero-icon-container img:hover {
+            box-shadow: -.2rem .2rem 5rem lightblue;
+            opacity: .7;
+        }
+    
+        .skyline {
+            background: radial-gradient(circle at top, #fda 25%, transparent 37%);
+        }
+    
+        footer {
+            box-shadow: -30px -10px 60px #fc9;
+            height: 18rem;
+        }
+        }    
+
+@media (min-width: 901px) and (max-width: 1439px){
+
+    .header {
+        height: 16rem;
+    }
+
+    .name {
+        font-size: 3.5rem;
+        margin-top: 3rem;
+    }
+
+    .navbar ul {
+       
+        column-gap: .5rem;
+        margin: 3rem 0rem;
+    }
+
+    /* Navbar Links */
+    .navbar li a {
+        font-size: 1.5rem;
+    }
+    
+
+    .hero-container {
+        width: 100%;
+        margin: auto;
+        padding-top: 9rem;
+    }
+
+    /* Hero Intro Container */
+    .intro-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+        width: 80%;
+        margin: auto;
+        background: linear-gradient(to bottom, #fff 1rem, #ffffffaa 6rem, #ddd 75%);
+    }
+
+    .satisfy-font {
+        font-family: "Satisfy", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .intro-container h1 {
+        position: relative;
+        top: 6rem;
+        align-self: flex-start;
+        margin-left: 8rem;
+        font-size: 2rem;
+        transform: rotate(-9deg);
+    }
+
+    .bartender-lupa-image {
+        background-image: url(../resources/images/DonnyAtLupaReg.jpg);
+        background-size: contain;
+        background-position: right;
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+    }
+
+    .intro-container h2 {
+        position: relative;
+        bottom: 6rem;
+        left: 6rem;
+        font-size: 1.75rem;
+        transform: rotate(-9deg);
+    }
+
+    .menu-item-container {
+        width: 100%;
+        height: 55rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2rem;
+        margin-top: -8rem auto;
+        gap: 6rem;
+    }
+
+    .top-contact {
+        bottom: 28rem;
+        left: 15rem;
+    }
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        margin: auto;
+        padding: .5rem;
+        text-align: center;
+        gap: 1.2rem
+
+    }
+
+    .item-description {
+        gap: .5rem;
+        width: 100%;
+    }
+
+    .item-text {
+        font-size: 1.95rem;
+        font-weight: 200;
+    }
+
+    .price-text {
+        font-size: 0.85rem;
+    }
+
+    .description-text {
+        font-size: 1.1rem;
+    }
+
+    .intro-container a {
+        color: black;
+    }
+
+    .footnote-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        
+    }
+
+    .footnotes {
+        width: 80%;
+        font-size:  1.1rem;
     }
 
     .contact-links {
@@ -402,10 +840,6 @@ footer {
         padding: 0.55rem;
     }
 
-    .hero-icon-container a {
-        color: #eee;
-    }
-
     /* Shadow effect on Icon hover */
     .hero-icon-container img:hover {
         box-shadow: -.2rem .2rem 5rem lightblue;
@@ -422,3 +856,33 @@ footer {
     }
     }
         
+    @media (min-width: 1440px) {
+
+        .header {
+            height: 16rem;
+        }
+    
+        .name {
+            font-size: 5.5rem;
+            margin-top: 3rem;
+        }
+    
+        .navbar ul {
+           
+            column-gap: 1.5rem;
+            margin: 3rem 0rem;
+        }
+    
+        /* Navbar Links */
+        .navbar li a {
+            font-size: 1.75rem;
+        }
+
+        .top-contact {
+            bottom: 34rem;
+            left: 16rem;
+        }
+        
+    }
+
+            

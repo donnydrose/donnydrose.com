@@ -42,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     list-style-type: none;
-    gap: .5rem;
+    gap: 1rem;
 }
 
 /* Navbar Links */
@@ -66,11 +66,13 @@ text-decoration: none;
 .link-animation-design a {
     animation: linkColorChange 3s infinite;
     --link-color: #39f;
+    border-bottom: 1px solid var(--link-color);
 }
 
 .link-animation-blog a {
     animation: linkColorChange 6s infinite;
     --link-color: #afa;
+    border-bottom: 1px solid var(--link-color);
 }
 
 .link-animation-contact a {
@@ -82,11 +84,13 @@ text-decoration: none;
 .link-animation-music a {
     animation: linkColorChange 5s infinite;
     --link-color: #96f;
+    border-bottom: 1px solid var(--link-color);
 }
 
 .link-animation-home a {
      animation: linkColorChange 8s infinite;
     --link-color: #ffcc00;
+    border-bottom: 1px solid var(--link-color);
 }
 
 
@@ -178,14 +182,34 @@ img {
 footer {
     box-shadow: -30px -10px 160px coral;
 }
+
+
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 3rem;
+}
+
+.footer-social-links a {
+    color: coral;
+}
 /*  --- Responsive Media Queries  ---   */
 
-/*  Mobile styles (max-width: 600px) */
-@media (max-width: 600px) {
-    html {
-        font-size: 16px;
+/*  --- Responsive Media Queries  ---   */
+@media (max-width: 374px) {
+    .navbar ul {
+        flex-wrap: wrap;
     }
 
+    .navbar li {
+
+       margin: .8rem;
+    }
+
+}
+/*  Mobile styles (max-width: 600px) */
+@media (max-width: 600px) {
     .header {
         height: 16rem;
     }
@@ -196,8 +220,7 @@ footer {
     }
 
     .navbar ul {
-        flex-wrap: wrap;
-        gap: 1.5rem;
+        column-gap: .5rem;
         margin: 3rem 0rem;
     }
 
@@ -205,17 +228,6 @@ footer {
     .navbar li a {
         font-size: 1.2rem;
     }
-    
-    .link-animation-contact a {
-        margin: 0px 5rem;
-    }
-
-    footer {
-        text-align: center;
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-
 
     /*       Main Content Section     */
     .contact-form {
@@ -305,4 +317,82 @@ footer {
     footer {
         box-shadow: -30px -10px 160px coral;
     }
+}
+
+@media (min-width: 601px) and (max-width: 900px){
+
+    .header {
+        height: 16rem;
+    }
+
+    .name {
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+
+    .navbar ul {
+       
+        column-gap: .5rem;
+        margin: 3rem 0rem;
+    }
+
+    /* Navbar Links */
+    .navbar li a {
+        font-size: 1.2rem;
+    }
+    
+
+    .hero-container {
+        max-width: 100%;
+        margin: auto;
+        padding-top: 9rem;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1439px){
+
+    .header {
+        height: 16rem;
+    }
+
+    .name {
+        font-size: 3.5rem;
+        margin-top: 3rem;
+    }
+
+    .navbar ul {
+       
+        column-gap: .5rem;
+        margin: 3rem 0rem;
+    }
+
+    /* Navbar Links */
+    .navbar li a {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (min-width: 1440px) {
+
+    .header {
+        height: 16rem;
+    }
+
+    .name {
+        font-size: 5.5rem;
+        margin-top: 3rem;
+    }
+
+    .navbar ul {
+       
+        column-gap: 1.5rem;
+        margin: 3rem 0rem;
+    }
+
+    /* Navbar Links */
+    .navbar li a {
+        font-size: 1.75rem;
+    }
+
 }
