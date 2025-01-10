@@ -119,13 +119,14 @@ text-decoration: none;
 .singles-container .script {
     position: relative;
     top: 24rem;
-    left: 8rem;
+    left: 9rem;
     width: fit-content;
     font-family: "Satisfy", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 2.25rem;
     transform: rotate(-9deg);
+    line-height: 2.5rem;
     color: #96f;
 }
 
@@ -284,8 +285,8 @@ footer {
     
     .singles-container .script {
         position: relative;
-        top: 16rem;
-        left: 0rem;
+        top: 17rem;
+        left: 2rem;
         font-family: "Satisfy", serif;
       font-weight: 400;
       font-style: normal;
@@ -420,14 +421,14 @@ footer {
     
     .singles-container .script {
         position: relative;
-        top: 16rem;
-        left: 0rem;
+        top: 21rem;
+        left: 4rem;
         font-family: "Satisfy", serif;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 1.75rem;
-      transform: rotate(-9deg);
-      color: #96f;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.75rem;
+        transform: rotate(-9deg);
+        color: #96f;
     }
     
     .singles-container h1 {
@@ -445,8 +446,8 @@ footer {
     }
     
     .singles-image-container {
-        width: 100%;
-        height: 12rem;
+        width: 20rem;
+        height: 16rem;
         background-image: url(./resources/images/Sparrow-PlayingGuitar.png);
         background-size: cover;
         filter: hue-rotate(25deg) saturate(0.3);
@@ -553,8 +554,8 @@ footer {
     
     .singles-container .script {
         position: relative;
-        top: 16rem;
-        left: 0rem;
+        top: 24rem;
+        left: 6rem;
         font-family: "Satisfy", serif;
         font-weight: 400;
         font-style: normal;
@@ -566,7 +567,7 @@ footer {
     .singles-container h1 {
         color: black;
         text-align: center;
-        font-size: 1.75rem;
+        font-size: 2.5rem;
         margin-bottom: .8rem;
     }
     
@@ -578,8 +579,8 @@ footer {
     }
     
     .singles-image-container {
-        width: 100%;
-        height: 12rem;
+        width: 24rem;
+        height: 18rem;
         background-image: url(./resources/images/Sparrow-PlayingGuitar.png);
         background-size: cover;
         filter: hue-rotate(25deg) saturate(0.3);
